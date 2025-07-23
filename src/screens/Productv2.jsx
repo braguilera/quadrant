@@ -10,7 +10,6 @@ const Productv2 = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Título de la sección alternativa */}
         <motion.h2 
             className="text-5xl text-center font-bold text-gray-900 mb-4"
             initial={{ opacity: 0, y: 20 }}
@@ -30,9 +29,7 @@ const Productv2 = () => {
             Administra tus operaciones logísticas desde cualquier lugar. Ya sea que estés en movimiento, supervisando el almacén o gestionando envíos, nuestras aplicaciones se integran sin problemas en tu jornada laboral, facilitando la toma de decisiones y optimizando tu eficiencia
         </motion.h3>
 
-        {/* Bloque 1: WMS Logifleet - Imagen izquierda, texto derecha */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
-          {/* Imagen del celular - desliza desde la izquierda */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -100 }}
@@ -41,11 +38,9 @@ const Productv2 = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative">
-              {/* Elementos decorativos de fondo */}
               <div className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-teal-400/20 to-blue-500/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-gradient-to-br from-lime-400/30 to-teal-500/30 rounded-full blur-xl" />
 
-              {/* Imagen del celular */}
               <div className="relative z-10 p-4 max-w-sm mx-auto">
                 <img
                   src={LFmobile}
@@ -56,7 +51,6 @@ const Productv2 = () => {
             </div>
           </motion.div>
 
-          {/* Bloque de texto - aparece con fade-in desde la derecha */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: 100 }}
@@ -79,7 +73,6 @@ const Productv2 = () => {
             </div>
 
             <div className="space-y-6">
-              {/* Característica 1 */}
               <motion.div
                 className="flex items-start space-x-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -99,7 +92,6 @@ const Productv2 = () => {
                 </div>
               </motion.div>
 
-              {/* Característica 2 */}
               <motion.div
                 className="flex items-start space-x-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -132,9 +124,7 @@ const Productv2 = () => {
           </motion.div>
         </div>
 
-        {/* Bloque 2: Hax Trace - Texto izquierda, imagen derecha */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Bloque de texto - desliza desde la izquierda */}
           <motion.div
             className="space-y-8 order-2 lg:order-1"
             initial={{ opacity: 0, x: -100 }}
@@ -158,7 +148,6 @@ const Productv2 = () => {
             </div>
 
             <div className="space-y-6">
-              {/* Característica 1 */}
               <motion.div
                 className="flex items-start space-x-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -178,7 +167,6 @@ const Productv2 = () => {
                 </div>
               </motion.div>
 
-              {/* Característica 2 */}
               <motion.div
                 className="flex items-start space-x-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -210,7 +198,6 @@ const Productv2 = () => {
             </motion.button>
           </motion.div>
 
-          {/* Imagen del celular - aparece con fade-in desde la derecha */}
           <motion.div
             className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 100 }}
@@ -219,11 +206,9 @@ const Productv2 = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <div className="relative">
-              {/* Elementos decorativos de fondo */}
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-red-400/20 to-pink-500/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-orange-400/30 to-red-500/30 rounded-full blur-xl" />
 
-              {/* Imagen del celular */}
               <div className="relative z-10 p-4 max-w-sm mx-auto">
                 <img
                   src={HTmobile}

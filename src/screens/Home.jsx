@@ -6,7 +6,6 @@ import RotatingText from "../ui/RotatingText"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
-// Función para generar un número aleatorio en un rango
 const random = (min, max) => Math.random() * (max - min) + min;
 
 const Home = () => {
@@ -27,17 +26,15 @@ const Home = () => {
   return (
     <div className="w-full flex flex-col h-screen font-sans relative">
       <section
-        className="relative m-4 h-full rounded-2xl overflow-hidden" // Añadimos overflow-hidden aquí para contener el fondo
+        className="relative m-4 h-full rounded-2xl overflow-hidden" 
         style={{ background: "radial-gradient(circle at 50% 125%, #746bd3, #4035e8)" }}
       >
-        {/* --- CAMBIO: El contenedor del fondo ahora tiene z-0 --- */}
         <div className="absolute inset-0 z-0">
-          {/* Partículas brillantes */}
           <div className="absolute inset-0 pointer-events-none">
             {particles.map(p => (
               <motion.div
                 key={p.id}
-                className="absolute rounded-full bg-white" // Cambiado a blanco sólido para mejor visibilidad
+                className="absolute rounded-full bg-white"
                 style={{
                   left: `${p.x}%`,
                   top: `${p.y}%`,
@@ -61,7 +58,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* --- CAMBIO: El contenido principal ahora tiene z-10 --- */}
         <div className="relative z-10 flex flex-col items-center justify-between h-full py-20 px-6">
           <div className="flex flex-col items-center gap-8">
             <motion.div

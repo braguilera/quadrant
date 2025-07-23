@@ -154,7 +154,6 @@ const RotatingText = forwardRef((props, ref) => {
       layout
       transition={transition}
     >
-      {/* Screen-reader only text */}
       <span className="sr-only">{texts[currentTextIndex]}</span>
       <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
         <motion.div
