@@ -24,8 +24,21 @@ const productsData = {
     features: ["Gestión de incidentes y riesgos para activos.", "Soporte para múltiples métodos de inventario (FEFO, LIFO, FIFO).", "Tecnología RFID integrada para seguimiento eficiente.", "Clasificación flexible de productos por familia, criticidad o vencimiento."],
     buttonText: "Conocer todo sobre Logifleet",
     hotspots: [
-      { title: "Control de Inventario en Tiempo Real", description: "Visibilidad completa de tu stock para una administración precisa y eficiente.", position: { top: "35%", left: "60%" }, direction: "right" },
-      { title: "Optimización Automática de Espacio", description: "Nuestros algoritmos maximizan la capacidad de tu almacén y reducen el desperdicio.", position: { top: "65%", left: "40%" }, direction: "top-right" },
+      { title: "Control de Inventario en Tiempo Real", 
+        description: "Visibilidad completa de tu stock para una administración precisa y eficiente.", 
+        position: { 
+          top: "35%", 
+          left: "60%" 
+        }, 
+        direction: "right" 
+      },
+      { title: "Optimización Automática de Espacio", 
+        description: "Nuestros algoritmos maximizan la capacidad de tu almacén y reducen el desperdicio.", 
+        position: { 
+          top: "65%", 
+          left: "40%" }, 
+          direction: "top-left" 
+        },
     ],
   },
   hax: {
@@ -46,8 +59,22 @@ const productsData = {
     features: ["Generación de pedidos con detalles específicos por parte de los receptores.", "Remitos electrónicos detallados para todas las partes.", "Capacidad de video forense para una seguridad mejorada.", "Gestión centralizada de todos los pedidos y su historial."],
     buttonText: "Descubrir el poder de HaxTrace",
     hotspots: [
-      { title: "Trazabilidad Completa del Producto", description: "Sigue el ciclo de vida de tu producto, desde el origen hasta la entrega final.", position: { top: "40%", left: "45%" }, direction: "left" },
-      { title: "Seguimiento de Flota en Vivo", description: "Monitorea tu flota y el estado de los pedidos con notificaciones instantáneas.", position: { top: "70%", left: "65%" }, direction: "top-left" },
+      { title: "Trazabilidad Completa del Producto", 
+        description: "Sigue el ciclo de vida de tu producto, desde el origen hasta la entrega final.", 
+        position: { 
+          top: "20%", 
+          left: "55%" 
+        }, 
+        direction: "left" 
+      },
+      { title: "Seguimiento de Flota en Vivo", 
+        description: "Monitorea tu flota y el estado de los pedidos con notificaciones instantáneas.", 
+        position: { 
+          top: "80%", 
+          left: "45%" 
+        }, 
+        direction: "top-right" 
+      },
     ],
   },
 }
@@ -113,7 +140,10 @@ export default function Products() {
                       {hoveredProduct === product.id && (
                         <>
                           {product.hotspots.map((hotspot, index) => (
-                            <InteractiveHotspot key={index} {...hotspot} delay={index * 0.2} />
+                            <InteractiveHotspot 
+                            key={index} 
+                            {...hotspot} 
+                            />
                           ))}
                         </>
                       )}
