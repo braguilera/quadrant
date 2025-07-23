@@ -1,0 +1,93 @@
+/* Importa las utilidades de Tailwind v4 */
+@import "tailwindcss";
+
+/* ---------------------------------------------- */
+/* 1. Definición de Colores y Tipografías         */
+/* ---------------------------------------------- */
+@theme {
+  --color-primary: #4035e8; /* Azul Principal */
+  --color-secondary: #d0f04d; /* Verde Secundario */
+  --color-accent: #746bd3; /* Variante de Azul */
+
+  --font-Gotham: "Gotham", sans-serif; /* Gotham para cuerpo de texto */
+  --font-Hackman: "Hackman", sans-serif; /* Hackman para titulares */
+}
+
+/* ---------------------------------------------- */
+/* 2. Declaración de las Fuentes (Font Faces)     */
+/* ---------------------------------------------- */
+
+/* Hackman para titulares y logos */
+@font-face {
+  font-family: 'Hackman';
+  src: url('/fonts/Hackman-Bold.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hackman';
+  src: url('/fonts/Hackman-Black.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham para cuerpo de texto */
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Book.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
+  font-weight: 400; /* Book/Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Medium.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------------------------------------- */
+/* 3. Aplicación de la Fuente Base                */
+/* ---------------------------------------------- */
+body {
+  font-family: theme('fontFamily.sans'); /* Aplica Gotham como fuente por defecto */
+}
+
+/* globals.css */
+
+@keyframes blob-move {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 40px) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 20px) scale(1.2);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* globals.css */
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
