@@ -67,7 +67,7 @@ const Home = () => {
               </div>
 
               <motion.div
-                className="absolute -left-8 md:left-0 -bottom-14 md:-bottom-40 w-[200%] lg:w-[150%] xl:w-[120%]" 
+                className="absolute -left-8 md:left-0 -bottom-16 md:-bottom-40 w-[200%] lg:w-[150%] xl:w-[120%]" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >
