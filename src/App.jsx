@@ -9,10 +9,7 @@ function App() {
   return (
     <>
       <Home/>
-      <Partners/>
-      <Products />
-      <Productv2 />
-      
+      <Products />      
     </>
   )
 }
