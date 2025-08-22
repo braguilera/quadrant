@@ -7,7 +7,7 @@
 @theme {
   --color-primary: #4035e8; /* Azul Principal */
   --color-secondary: #d0f04d; /* Verde Secundario */
-  --color-accent: #746bd3; /* Variante de Azul */
+  --color-accent: #EEFDFD; /* Variante de Azul */
 
   --font-Gotham: "Gotham", sans-serif; /* Gotham para cuerpo de texto */
   --font-Hackman: "Hackman", sans-serif; /* Hackman para titulares */

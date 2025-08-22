@@ -10,14 +10,14 @@ import CardProduct from "../components/products/CardProduct";
 
 export default function Products() {
   return (
-    <section className=" bg-gray-50 relative">
+    <section className=" bg-accent relative">
       <div className="absolute -top-7 -left-20 w-[200%] z-0">
         <img className="w-full" src={arrow_first_product} alt="Fondo de flecha decorativa" />
       </div>
 
       <article className="relative max-w-7xl mx-auto px-6 text-center z-30">
         <motion.h2
-          className="pt-5 pl-6 text-2xl font-bold text-gray-900 mb-4"
+          className="pt-5 pl-6 text-2xl font-bold text-primary mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
