@@ -5,6 +5,7 @@ import { ArrowRight, X } from "lucide-react";
 import HTmobile from "../assets/HTmobile.png";
 import LFmobile from "../assets/LFmobile.png";
 import arrow_first_product from "../assets/products/arrow_first_product.svg";
+import CardProduct from "../components/products/CardProduct";
 
 const productsData = {
   wms: {
@@ -88,7 +89,6 @@ export default function Products() {
         <img className="w-full" src={arrow_first_product} alt="Fondo de flecha decorativa" />
       </div>
 
-      {/* --- CAMBIO AQUÍ: Se añade la clase 'relative' --- */}
       <article className="relative max-w-7xl mx-auto px-6 text-center z-30">
         <motion.h2
           className="pt-5 pl-6 text-2xl font-bold text-gray-900 mb-4"
@@ -99,15 +99,12 @@ export default function Products() {
         >
           Nuestros Productos
         </motion.h2>
-        <motion.h3
-          className="text-lg font-semibold text-gray-600 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Administra tus operaciones logísticas desde cualquier lugar. Ya sea que estés en movimiento, supervisando el almacén o gestionando envíos, nuestras aplicaciones se integran sin problemas en tu jornada laboral, facilitando la toma de decisiones y optimizando tu eficiencia
-        </motion.h3>
+        
+      </article>
+
+      <article className="relative z-30">
+        <CardProduct logifleet={true}/>
+        <CardProduct/>
       </article>
     </section>
   );
