@@ -46,22 +46,18 @@ const Services = () => {
   };
 
   return (
-    // CAMBIO 1: Añadimos 'relative' a la sección para que actúe como contenedor
-    <section className="relative max-w-7xl mx-auto px-6 py-12 overflow-hidden"> 
-        
-        {/* CAMBIO 2: Movemos la imagen a su propia capa de fondo (z-0) */}
+    <section className="relative max-w-7xl mx-auto px-6 pb-12 overflow-hidden"> 
         <div className="absolute inset-0 z-0 pointer-events-none">
             <img
                 src={services_vector} 
                 alt="Vector decorativo de fondo" 
-                className="absolute bottom-0 left-0 w-3/4" // Ajusta posición y tamaño aquí
+                className="absolute bottom-0 left-0 w-3/4" 
             />
         </div>
 
-        {/* CAMBIO 3: Todo el contenido va en un contenedor con z-index superior */}
         <div className="relative z-10">
             <motion.h2
-                className="pt-5 text-3xl lg:text-4xl font-display font-bold text-gray-800 mb-4"
+                className="pt-5 text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -75,7 +71,7 @@ const Services = () => {
                 </span>
             </motion.h2>
             <motion.p
-                className='text-gray-600 mb-10 text-lg'
+                className='text-gray-600/70 mb-10 text-lg'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
