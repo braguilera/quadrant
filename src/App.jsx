@@ -1,4 +1,5 @@
 import './App.css'
+import CtaSection from './screens/CtaSection'
 import Home from './screens/Home'
 import Partners from './screens/Partners'
 import Products from './screens/Products'
@@ -12,6 +13,7 @@ function App() {
       <Home/>
       <Products />
       <Services />      
+      <CtaSection/>
     </>
   )
 }
