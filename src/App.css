@@ -9,10 +9,14 @@
   --font-Hackman: "Hackman", sans-serif; 
 }
 
-@media (min-height: 330px) {
+@media (max-width: 330px) {
   
   .padding-y-smh {
     @apply py-0; 
+  }
+
+  .padding-x-smh {
+    @apply px-4; 
   }
 
   .hidden-smh {
@@ -24,11 +28,16 @@
   }
 
   .text-smh {
-    font-size: .8rem;
+    font-size: .9rem;
+  }
+
+  .padding-buttom {
+    padding-bottom: 4px;
+    padding-top: 4px;
   }
 
   .padding-y-text{
-    padding-top: 12px;
+    padding-top: 4px;
   }
 }
 

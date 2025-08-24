@@ -3,13 +3,14 @@ import { motion } from "framer-motion"
 import Q_arrow from "../assets/hero/Q_arrow.svg"
 import hero_desktop from "../assets/hero_desktop.png"
 import Nav from "../components/Nav"
-
+import Button from "../ui/Button" // Asumo que tienes este componente
 
 const Home = () => {
   return (
     <div id="inicio" className="w-full flex flex-col h-screen font-sans relative">
       <img
         src={hero_desktop}
+        alt="Fondo de oficina tecnológica"
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
@@ -18,7 +19,7 @@ const Home = () => {
       <section
         className="relative h-full padding-y-smh py-20 bg-black/50 flex" 
       >
-        <div className="z-10 flex flex-col h-full py-20 px-8 md:px-40">
+        <div className="z-10 flex flex-col h-full padding-x-smh py-20 px-8 md:px-40">
           <div className="flex flex-col gap-8">
             <motion.div
               className="space-y-8"
@@ -56,23 +57,28 @@ const Home = () => {
                   />
                 </motion.h1>
                 <motion.p
-                  className="lg:text-2xl text-gray-200 max-w-4xl leading-relaxed"
+                  className="lg:text-2xl text-gray-200 text-smh max-w-4xl leading-relaxed"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
                   Optimiza tu cadena de suministro con nuestra plataforma integral. Soluciones diseñadas para las demandas únicas de tu empresa.
                 </motion.p>
+                <motion.div
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  transition={{ duration: 0.6 }}
+                >
+                    <Button variant="outline" className="text-lg px-8 py-4 text-smh padding-buttom">
+                      Comenzar Ahora
+                    </Button>
+                </motion.div>
               </div>
+
 
               <motion.div
                 className="absolute -left-8 md:left-0 -bottom-16 md:-bottom-40 w-[200%] lg:w-[150%] xl:w-[120%]" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >
-
-                <button className="lg:px-10 py-5 padding-y-text text-smh absolute top-6 lg:top-20 left-32 lg:left-1/6 cursor-pointer text-primary font-display font-bold lg:text-xl hover:scale-105 transition-all duration-300">
-                  Comenzar Ahora
-                </button>
                 <motion.img
                     className="w-full"
                     src={Q_arrow}
@@ -83,7 +89,6 @@ const Home = () => {
                   />
               </motion.div>
             </motion.div>
-
           </div>
         </div>
       </section>
