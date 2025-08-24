@@ -69,7 +69,7 @@ const CardProduct = ({logifleet=false}) => {
                 <a
                     href='#@'
                     target='_blank'
-                    className='text-primary font-semibold flex items-center justify-center mt-4 border border-primary rounded-full px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer'
+                    className='text-primary text-smh font-semibold flex items-center justify-center mt-4 border border-primary rounded-full px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer'
                 >
                     Conocer más sobre LogiFleet
                 </a>
@@ -131,9 +131,9 @@ const CardProduct = ({logifleet=false}) => {
                     <a
                         href='#@'
                         target='_blank'
-                        className='text-primary font-semibold flex items-center justify-center mt-4 border border-primary rounded-full px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer'
+                        className='text-primary text-smh font-semibold flex items-center justify-center mt-4 border border-primary rounded-full px-4 py-2 hover:bg-primary hover:text-white transition-colors cursor-pointer'
                     >
-                        Descubrir el poder de HaxTrace
+                        Descubre más de HaxTrace
                     </a>
                 </article>
             </article>

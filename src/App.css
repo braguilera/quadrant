@@ -1,64 +1,76 @@
-/* Importa las utilidades de Tailwind v4 */
 @import "tailwindcss";
 
-/* ---------------------------------------------- */
-/* 1. Definición de Colores y Tipografías         */
-/* ---------------------------------------------- */
 @theme {
-  --color-primary: #4035e8; /* Azul Principal */
-  --color-secondary: #d0f04d; /* Verde Secundario */
-  --color-accent: #EEFDFD; /* Variante de Azul */
-
-  --font-Gotham: "Gotham", sans-serif; /* Gotham para cuerpo de texto */
-  --font-Hackman: "Hackman", sans-serif; /* Hackman para titulares */
+  --color-primary: #4035e8; 
+  --color-secondary: #d0f04d; 
+  --color-accent: #EEFDFD; 
+  --breakpoint-smh: 330px
+  --font-Gotham: "Gotham", sans-serif; 
+  --font-Hackman: "Hackman", sans-serif; 
 }
 
-/* ---------------------------------------------- */
-/* 2. Declaración de las Fuentes (Font Faces)     */
-/* ---------------------------------------------- */
+@media (min-height: 330px) {
+  
+  .padding-y-smh {
+    @apply py-0; 
+  }
 
-/* Hackman para titulares y logos */
+  .hidden-smh {
+    display: none; 
+  }
+
+  .h1-smh {
+    font-size: 1.5rem; 
+  }
+
+  .text-smh {
+    font-size: .8rem;
+  }
+
+  .padding-y-text{
+    padding-top: 12px;
+  }
+}
+
 @font-face {
   font-family: 'Hackman';
-  src: url('/fonts/Hackman-Bold.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
-  font-weight: 700; /* Bold */
+  src: url('/fonts/Hackman-Bold.woff2') format('woff2'); 
+  font-weight: 700; 
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Hackman';
-  src: url('/fonts/Hackman-Black.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
-  font-weight: 900; /* Black */
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Gotham para cuerpo de texto */
-@font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/Gotham-Book.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
-  font-weight: 400; /* Book/Regular */
+  src: url('/fonts/Hackman-Black.woff2') format('woff2'); 
+  font-weight: 900; 
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/Gotham-Medium.woff2') format('woff2'); /* Reemplaza con el nombre real de tu archivo */
-  font-weight: 500; /* Medium */
+  src: url('/fonts/Gotham-Book.woff2') format('woff2'); 
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* ---------------------------------------------- */
-/* 3. Aplicación de la Fuente Base                */
-/* ---------------------------------------------- */
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: theme('fontFamily.sans'); /* Aplica Gotham como fuente por defecto */
+  font-family: theme('fontFamily.sans'); 
 }
 
-/* globals.css */
+html {
+  scroll-behavior: smooth;
+}
 
 @keyframes blob-move {
   0% {
@@ -77,8 +89,6 @@ body {
     transform: translate(0px, 0px) scale(1);
   }
 }
-
-/* globals.css */
 
 @keyframes wave {
   0% {

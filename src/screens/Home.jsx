@@ -1,24 +1,22 @@
-import InteractiveHotspot from "../components/InteractiveHotspot"
-import hero2 from "../assets/hero2.png"
-import { NumberTicker } from "../ui/NumberTicker"
 import RotatingText from "../ui/RotatingText"
 import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
 import Q_arrow from "../assets/hero/Q_arrow.svg"
-import quadrant from "../assets/quadrant.svg"
 import hero_desktop from "../assets/hero_desktop.png"
+import Nav from "../components/Nav"
 
 
 const Home = () => {
   return (
-    <div className="w-full flex flex-col h-screen font-sans relative">
+    <div id="inicio" className="w-full flex flex-col h-screen font-sans relative">
       <img
         src={hero_desktop}
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
+      <Nav/>
+
       <section
-        className="relative h-full py-20 bg-black/50 flex" 
+        className="relative h-full padding-y-smh py-20 bg-black/50 flex" 
       >
         <div className="z-10 flex flex-col h-full py-20 px-8 md:px-40">
           <div className="flex flex-col gap-8">
@@ -32,14 +30,14 @@ const Home = () => {
             >
               <div className="space-y-2 w-full flex flex-col">
                 <motion.h1
-                  className="text-3xl lg:text-6xl font-display text-white leading-tight"
+                  className="text-3xl h1-smh lg:text-6xl font-display text-white leading-tight"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
                   Tecnologías para una
                 </motion.h1>
                 <motion.h1
-                  className="text-3xl lg:text-6xl w-full font-display font-bold text-white leading-tight flex gap-4 flex-wrap"
+                  className="text-3xl h1-smh  lg:text-6xl w-full font-display font-bold text-white leading-tight flex gap-4 flex-wrap"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
@@ -72,7 +70,7 @@ const Home = () => {
                 transition={{ duration: 0.6 }}
               >
 
-                <button className="lg:px-10 py-5 absolute top-4 lg:top-20 left-28 lg:left-1/6 cursor-pointer text-primary font-display font-bold lg:text-xl hover:scale-105 transition-all duration-300">
+                <button className="lg:px-10 py-5 padding-y-text text-smh absolute top-4 lg:top-20 left-28 lg:left-1/6 cursor-pointer text-primary font-display font-bold lg:text-xl hover:scale-105 transition-all duration-300">
                   Comenzar Ahora
                 </button>
                 <motion.img

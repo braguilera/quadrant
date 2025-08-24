@@ -46,16 +46,9 @@ const Services = () => {
   };
 
   return (
-    <section className="relative max-w-7xl mx-auto px-6 pb-12 overflow-hidden"> 
-        <div className="absolute inset-0 z-0 pointer-events-none">
-            <img
-                src={services_vector} 
-                alt="Vector decorativo de fondo" 
-                className="absolute bottom-0 left-0 w-3/4" 
-            />
-        </div>
+    <section id='servicios' className="relative max-w-7xl mx-auto px-6 pb-12 overflow-hidden"> 
 
-        <div className="relative z-10">
+        <div className="relative">
             <motion.h2
                 className="pt-5 text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -81,7 +74,7 @@ const Services = () => {
             </motion.p>
 
             <motion.article
-                className='flex flex-col gap-4' 
+                className='relative flex flex-col gap-4' 
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -97,6 +90,13 @@ const Services = () => {
                     />
                 </motion.div>
                 ))}
+                <div className="absolute inset-0 -z-10 pointer-events-none">
+                  <img
+                      src={services_vector} 
+                      alt="Vector decorativo de fondo" 
+                      className="absolute top-0 -left-20 w-3/4" 
+                  />
+              </div>
             </motion.article>
         </div>
     </section>

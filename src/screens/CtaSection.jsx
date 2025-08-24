@@ -26,7 +26,7 @@ const CtaSection = () => {
           <img
             src={cta_arrow} 
             alt="Flecha de llamada a la acción"
-            className="absolute bottom-10 left-0 w-3/4"
+            className="absolute bottom-10 left-0 w-3/4 hidden-smh"
           />
           
           <div className="max-w-lg">

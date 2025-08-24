@@ -1,11 +1,14 @@
 import React from 'react'
 import Button from '../ui/Button'
-import { MoveUpRight } from 'lucide-react'
+import { Linkedin, MoveUpRight } from 'lucide-react'
+import NavLinks from '../ui/NavLinks'
 
 const Footer = () => {
   return (
-    <section className='relative max-w-7xl mx-auto p-6 pb-12 overflow-hidden'>
-      <article>
+    <section className='relative max-w-7xl mx-auto overflow-hidden'>
+      <article
+        className=' p-6'
+      >
         <h2
           className='text-5xl font-bold mb-4 text-gray-600/90'
         >
@@ -29,8 +32,20 @@ const Footer = () => {
         </aside>
       </article>
       
-      <article>
-        
+      <article
+        className='flex flex-col justify-between items-center gap-4 text-gray-600 p-2 mt-4 bg-accent'
+      >
+        <p>COPYRIGHT © Quadrant, 2025</p>
+        <NavLinks
+          variant='gray'
+        />
+        <a
+          href="https://www.linkedin.com/company/quadrantsaas"
+          target='_blank'
+        >
+          <Linkedin className='hover:scale-105 hover:text-primary'></Linkedin>
+
+        </a>
       </article>
     </section>
   )
