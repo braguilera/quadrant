@@ -70,7 +70,7 @@ const Home = () => {
                 transition={{ duration: 0.6 }}
               >
 
-                <button className="lg:px-10 py-5 padding-y-text text-smh absolute top-4 lg:top-20 left-28 lg:left-1/6 cursor-pointer text-primary font-display font-bold lg:text-xl hover:scale-105 transition-all duration-300">
+                <button className="lg:px-10 py-5 padding-y-text text-smh absolute top-6 lg:top-20 left-32 lg:left-1/6 cursor-pointer text-primary font-display font-bold lg:text-xl hover:scale-105 transition-all duration-300">
                   Comenzar Ahora
                 </button>
                 <motion.img
