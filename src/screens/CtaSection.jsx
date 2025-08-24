@@ -33,7 +33,7 @@ const CtaSection = () => {
             <h2 className='text-5xl text-gray-100/90 font-bold'>
               Transforma tu Logística Hoy
             </h2>
-            <p className='text-gray-300/80 mt-4 text-lg'>
+            <p className='text-gray-300/80 mt-4 text-base'>
               Hablemos. Nuestro equipo de especialistas está listo para analizar tus desafíos y mostrarte cómo nuestras soluciones pueden potenciar tu negocio. Agenda una demostración personalizada y sin compromiso.
             </p>
 

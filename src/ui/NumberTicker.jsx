@@ -2,18 +2,19 @@
 
 import { useInView, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef } from "react";
-
+import { motion } from "framer-motion"; // Se importa motion
 import { cn } from "../lib/utils";
 
-export function NumberTicker({
+// Se convierte en un componente 'motion'
+export const NumberTicker = ({
   value,
   startValue = 0,
   direction = "up",
   delay = 0,
   className,
   decimalPlaces = 0,
-  ...props
-}) {
+  ...props // Se aceptan todas las demás props (incluida 'animate')
+}) => {
   const ref = useRef(null);
   const motionValue = useMotionValue(direction === "down" ? value : startValue);
   const springValue = useSpring(motionValue, {
@@ -45,15 +46,13 @@ export function NumberTicker({
   );
 
   return (
-    <span
+    // El 'span' ahora es un 'motion.span' y recibe las props de animación
+    <motion.span
       ref={ref}
-      className={cn(
-        "inline-block tabular-nums tracking-wider font-bold text-gray-800 text-5xl",
-        className,
-      )}
+      className={cn("inline-block tabular-nums", className)}
       {...props}
     >
       {startValue}
-    </span>
+    </motion.span>
   );
-}
+};

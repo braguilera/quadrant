@@ -71,7 +71,7 @@ const Services = () => {
                 </span>
             </motion.h2>
             <motion.p
-                className='text-gray-600/70 mb-10 text-lg'
+                className='text-gray-600/70 mb-10 text-base'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
