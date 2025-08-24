@@ -38,7 +38,7 @@ const CtaSection = () => {
             </p>
 
             <div className="flex justify-center items-center mt-8">
-              <Button onClick={() => setIsFormOpen(true)} variant="primary">
+              <Button onClick={() => setIsFormOpen(true)} variant="outline">
                 Agendar Reunión
               </Button>
             </div>

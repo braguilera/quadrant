@@ -30,7 +30,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="relative max-w-7xl mx-auto px-6 py-12">
+    <section className="relative max-w-7xl mx-auto px-6 bg-accent py-12">
 
         <div className="absolute inset-0 z-0 pointer-events-none">
             <img

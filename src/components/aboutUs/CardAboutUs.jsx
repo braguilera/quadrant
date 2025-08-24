@@ -9,7 +9,7 @@ const CardAboutUs = ({ number, title, description, Icon }) => {
         <motion.div
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
-            className="relative p-8 rounded-2xl border border-gray-200/80 cursor-pointer overflow-hidden h-48"
+            className="relative p-8 rounded-2xl border border-gray-200/80 cursor-pointer overflow-hidden shadow-sm hover:shadow-md"
             initial={{opacity: 0, y: 20}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{ once: true }}
@@ -53,7 +53,7 @@ const CardAboutUs = ({ number, title, description, Icon }) => {
                         <motion.p
                             className="absolute text-[#7E960C] text-sm text-left mt-2" 
                             initial={{ opacity: 0, y: 100 }}
-                            animate={{ opacity: 1, y: 70, transition: { delay: 0.1 } }}
+                            animate={{ opacity: 1, y: 60, transition: { delay: 0.1 } }}
                             exit={{  y: 200 }}
                         >
                             {description}
