@@ -4,9 +4,11 @@ import NavLinks from '../ui/NavLinks';
 import Button from '../ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MenuToggle } from '../ui/MenuToggle'; 
+import ContactFormModal from './ContactFormModal';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isFormOpen, setIsFormOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);   
 
     useEffect(() => {
@@ -39,11 +41,13 @@ const Nav = () => {
     }; 
 
     return (
+    <>
+        <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
         <motion.nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-black/60 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}
+            className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${isScrolled ? 'bg-black/60 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}
         >
         <div className='max-w-7xl mx-auto p-4 flex items-center justify-between'>
-            {/* --- CAMBIO AQUÍ: Se envuelve la imagen en un enlace --- */}
             <a href="#inicio">
                 <img
                     src={quadrantLogo}
@@ -54,7 +58,7 @@ const Nav = () => {
             
             <div className={`hidden md:flex items-center gap-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
                 <NavLinks />
-                <Button variant={isScrolled ? 'primary' : 'outline'}>
+                <Button variant='outlineNav' onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
                     Agenda una reunión
                 </Button>
             </div>
@@ -68,7 +72,6 @@ const Nav = () => {
             </motion.div>
         </div>
 
-            {/* Menú Desplegable Móvil */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -93,7 +96,7 @@ const Nav = () => {
                                 <NavLinks />
                             </motion.div>
                             <motion.div variants={itemVariants}>
-                                <Button variant='outlineNav' onClick={() => setIsOpen(false)}>
+                                <Button variant='outlineNav' onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
                                     Agenda una reunión
                                 </Button>
                             </motion.div>
@@ -102,6 +105,7 @@ const Nav = () => {
                 )}
             </AnimatePresence>
         </motion.nav>
+    </>
     )
 }
 

@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../ui/Button'
 import { Linkedin, MoveUpRight } from 'lucide-react'
 import NavLinks from '../ui/NavLinks'
+import ContactFormModal from '../components/ContactFormModal'
 
 const Footer = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  
   return (
+    <>
+    <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
     <section className='relative max-w-7xl mx-auto overflow-hidden'>
       <article
         className=' p-6'
@@ -26,7 +32,7 @@ const Footer = () => {
           >
             Nuestro equipo está listo para analizar tus desafíos. Agenda una reunión gratuita y descubre el potencial de nuestras soluciones. 
           </p>
-          <Button>
+          <Button onClick={() => setIsFormOpen(true)}>
             <MoveUpRight className="w-16 h-16" />
           </Button>
         </aside>
@@ -48,6 +54,7 @@ const Footer = () => {
         </a>
       </article>
     </section>
+    </>
   )
 }
 

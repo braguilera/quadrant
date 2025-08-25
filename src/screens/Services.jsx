@@ -96,7 +96,7 @@ const Services = () => {
                       alt="Vector decorativo de fondo" 
                       className="absolute top-0 -left-20 w-3/4" 
                   />
-              </div>
+                </div>
             </motion.article>
         </div>
     </section>

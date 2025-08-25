@@ -3,10 +3,17 @@ import { motion } from "framer-motion"
 import Q_arrow from "../assets/hero/Q_arrow.svg"
 import hero_desktop from "../assets/hero_desktop.png"
 import Nav from "../components/Nav"
-import Button from "../ui/Button" // Asumo que tienes este componente
+import Button from "../ui/Button"
+import { useState } from "react"
+import ContactFormModal from "../components/ContactFormModal"
 
 const Home = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  
   return (
+  <>
+    <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
     <div id="inicio" className="w-full flex flex-col h-screen font-sans relative">
       <img
         src={hero_desktop}
@@ -67,7 +74,7 @@ const Home = () => {
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
-                    <Button variant="outline" className="text-lg px-8 py-4 text-smh padding-buttom">
+                    <Button variant="outline" className="text-lg px-4 py-2 text-smh padding-buttom" onClick={() => setIsFormOpen(true)}>
                       Comenzar Ahora
                     </Button>
                 </motion.div>
@@ -93,6 +100,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+  </>
   )
 }
 
