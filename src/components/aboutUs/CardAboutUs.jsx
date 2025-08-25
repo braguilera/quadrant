@@ -13,7 +13,7 @@ const CardAboutUs = ({ number, title, description, Icon }) => {
             onHoverEnd={() => !isTouchDevice() && setIsActive(false)}
             onTap={() => setIsActive(!isActive)}
 
-            className="relative p-8 rounded-2xl border border-gray-200/80 cursor-pointer overflow-hidden shadow-sm hover:shadow-md"
+            className="relative p-8 query-xs rounded-2xl border border-gray-200/80 cursor-pointer overflow-hidden shadow-sm hover:shadow-md"
             initial={{opacity: 0, y: 20}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{ once: true }}

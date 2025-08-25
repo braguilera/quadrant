@@ -25,7 +25,7 @@ const itemVariants = {
 
 const NavLinks = ({ variant = 'white' }) => {
 
-  const textColorClass = variant === 'gray' ? 'text-gray-600 hover:text-primary transition-colors duration-300' : 'text-white hover:text-secondary transition-colors duration-300';
+  const textColorClass = variant === 'gray' ? 'text-gray-600 hover:text-primary transition-colors duration-300 lg:text-xl' : 'text-white hover:text-secondary transition-colors duration-300';
 
   return (
     <motion.div

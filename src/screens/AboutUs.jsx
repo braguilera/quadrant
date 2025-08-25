@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import imagen_example from '../assets/aboutUs/imagen_example.png';
 import aboutUs_arrow from '../assets/aboutUs/aboutUs_arrow.svg';
+import aboutUs_arrow_computer from '../assets/aboutUs/aboutUs_arrow_computer.svg';
 
 import CardAboutUs from '../components/aboutUs/CardAboutUs';
 import { Truck, Bug, SquareTerminal } from 'lucide-react'; 
@@ -30,19 +31,10 @@ const AboutUs = () => {
   ];
 
   return (
-    <section id='nosotros' className="relative max-w-7xl mx-auto px-6 bg-accent py-12">
-
-        <div className="absolute inset-0 z-0 pointer-events-none">
-            <img
-                src={aboutUs_arrow} 
-                alt="Vector decorativo de fondo" 
-                className="absolute bottom-0 left-0 w-3/4" 
-            />
-        </div>
-
-      <article>
+    <section id='nosotros' className="relative p-8 lg:px-36 bg-accent pt-8 flex flex-col md:flex-row gap-10 items-center justify-center">
+      <article className='flex flex-col items-center z-10 max-w-7xl'>
         <motion.h2
-          className="pt-5 text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
+          className="pt-5 self-start text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -67,11 +59,11 @@ const AboutUs = () => {
         <img
           src={imagen_example}
           alt="image_example"
-          className='mb-10 rounded-lg shadow-lg'
+          className='mb-10 rounded-lg shadow-lg xl:w-1/2'
         />
       </article>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="relative z-0 flex flex-col items-center gap-8 pb-8">
         {statsData.map((stat, index) => (
           <CardAboutUs 
             key={index}
@@ -81,6 +73,19 @@ const AboutUs = () => {
             Icon={stat.Icon}
           />
         ))}
+        
+        <div className="absolute inset-0 h-full -z-10 pointer-events-none">
+            <img
+                src={aboutUs_arrow} 
+                alt="Vector decorativo de fondo para móvil" 
+                className="absolute md:hidden -bottom-20 -left-20 h-full" 
+            />
+            <img
+                src={aboutUs_arrow_computer} 
+                alt="Vector decorativo de fondo para escritorio" 
+                className="hidden md:block absolute bottom-0 right-20 scale-[2.0] origin-bottom-right" 
+            />
+        </div>
       </div>
     </section>
   )

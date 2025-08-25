@@ -41,6 +41,16 @@
   }
 }
 
+@media (min-width: 450px) {
+  .query-xs {
+    @apply w-96; 
+  }
+
+  .bottom-xs {
+    bottom: 0px; 
+  }
+}
+
 @font-face {
   font-family: 'Hackman';
   src: url('/fonts/Hackman-Bold.woff2') format('woff2'); 

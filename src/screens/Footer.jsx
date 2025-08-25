@@ -11,12 +11,12 @@ const Footer = () => {
     <>
     <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
-    <section className='relative max-w-7xl mx-auto overflow-hidden'>
+    <section className='relative mx-auto overflow-hidden'>
       <article
-        className=' p-6'
+        className='p-6 flex flex-col lg:flex-row lg:justify-between lg:gap-8 lg:px-36 items-center'
       >
         <h2
-          className='text-5xl font-bold mb-4 text-gray-600/90'
+          className='text-5xl lg:text-6xl lg:w-96 lg:px-2 font-bold mb-4 lg:mb-0 text-gray-600/90'
         >
           ¿Listo para 
           <span className='inline-block mt-3 mr-1 text-primary bg-secondary px-3 py-1 rounded-xl'>
@@ -28,7 +28,7 @@ const Footer = () => {
           className='flex gap-4'
         >
           <p
-            className='text-gray-600/70 '
+            className='text-gray-600/70 self-center justify-self-center'
           >
             Nuestro equipo está listo para analizar tus desafíos. Agenda una reunión gratuita y descubre el potencial de nuestras soluciones. 
           </p>
@@ -39,7 +39,7 @@ const Footer = () => {
       </article>
       
       <article
-        className='flex flex-col justify-between items-center gap-4 text-gray-600 p-2 mt-4 bg-accent'
+        className='flex flex-col lg:flex-row lg:px-36 lg:py-10 justify-between items-center gap-4 text-gray-600 p-2 mt-4 bg-accent'
       >
         <p>COPYRIGHT © Quadrant, 2025</p>
         <NavLinks
