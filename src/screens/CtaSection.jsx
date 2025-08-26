@@ -13,7 +13,7 @@ const CtaSection = () => {
     <>
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
-      <section className='relative h-screen lg:h-[500px] lg:px-10 w-full p-4 flex flex-col'>
+      <section className='relative h-screen lg:h-[500px] lg:px-10 w-full p-4 flex flex-col z-10'>
           <img
             src={cta_bg} 
             alt="Fondo de sección de llamada a la acción" 

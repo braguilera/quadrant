@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import CardServices from '../components/services/CardServices'; 
 import services_vector from '../assets/services/services_vector.svg';
+import services_vector_computer from '../assets/services/services_vector_computer.svg';
 
 import { MessagesSquare, CodeXml, Combine, CheckCircle } from 'lucide-react';
 
@@ -46,9 +47,10 @@ const Services = () => {
   };
 
   return (
-    <section id='servicios' className="relative max-w-7xl mx-auto px-6 pb-12 overflow-hidden"> 
+    <section id='servicios' className="relative max-w-7xl mx-auto px-6 pb-12 "> 
 
-        <div className="relative">
+        <div className="relative flex flex-col items-center z-10 xl:flex-row">
+          <article className='self-start'>
             <motion.h2
                 className="pt-5 text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -72,9 +74,10 @@ const Services = () => {
             >
                 Ponemos a tu disposición un equipo de expertos listos para transformar tus desafíos logísticos en ventajas competitivas.
             </motion.p>
+          </article>
 
             <motion.article
-                className='relative flex flex-col gap-4' 
+                className='relative flex flex-col gap-4 items-center w-full md:grid md:grid-cols-2' 
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -94,11 +97,16 @@ const Services = () => {
                   <img
                       src={services_vector} 
                       alt="Vector decorativo de fondo" 
-                      className="absolute top-0 -left-20 w-3/4" 
+                      className="block xl:hidden absolute top-0 -left-20 md:w-1/2 w-3/4" 
                   />
                 </div>
             </motion.article>
         </div>
+        <img
+            src={services_vector_computer} 
+            alt="Vector decorativo de fondo" 
+            className="absolute top-0 -right-1/4 h-80 " 
+        />
     </section>
   )
 }

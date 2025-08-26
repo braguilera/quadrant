@@ -10,10 +10,9 @@ const CardServices = ({ title, description, Icon, index }) => {
             onHoverStart={() => !isTouchDevice() && setIsActive(true)}
             onHoverEnd={() => !isTouchDevice() && setIsActive(false)}
             onTap={() => setIsActive(!isActive)} 
-            
             layout
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="p-6 rounded-2xl cursor-pointer bg-white shadow-sm hover:shadow-md overflow-hidden group min-h-[120px]"
+            className="relative p-8 lg:query-xs rounded-2xl bg-white border border-gray-200/80 cursor-pointer overflow-hidden w-full shadow-sm hover:shadow-md"
         >
             <div className="flex justify-between items-center">
                 <div className="flex items-center gap-4">
