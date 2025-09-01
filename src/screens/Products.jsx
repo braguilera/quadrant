@@ -10,7 +10,7 @@ import CardProduct from "../components/products/CardProduct";
 
 export default function Products() {
   return (
-    <section id="productos" className=" bg-accent relative">
+    <section id="productos" className=" bg-accent relative overflow-x-hidden">
       <div className="absolute -top-7 -left-20 w-[200%] z-0">
         <img className="w-full" src={arrow_first_product} alt="Fondo de flecha decorativa" />
       </div>

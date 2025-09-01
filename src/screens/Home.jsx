@@ -14,7 +14,7 @@ const Home = () => {
   <>
     <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
-    <div id="inicio" className="w-full flex flex-col h-screen font-sans relative">
+    <div id="inicio" className="w-full flex flex-col h-screen font-sans relative overflow-x-clip">
       <img
         src={hero_desktop}
         alt="Fondo de oficina tecnológica"

@@ -47,7 +47,7 @@ const Services = () => {
   };
 
   return (
-    <section id='servicios' className="relative max-w-7xl mx-auto px-6 pb-12 "> 
+    <section id='servicios' className="relative max-w-7xl mx-auto px-6 pb-12 overflow-x-clip"> 
 
         <div className="relative flex flex-col items-center z-10 xl:flex-row">
           <article className='self-start'>
