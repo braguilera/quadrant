@@ -93,7 +93,7 @@ const Services = () => {
                     />
                 </motion.div>
                 ))}
-                <div className="absolute inset-0 -z-10 pointer-events-none">
+                <div className="absolute inset-0 -z-10 pointer-events-none lg:hidden">
                   <img
                       src={services_vector} 
                       alt="Vector decorativo de fondo" 
@@ -105,7 +105,7 @@ const Services = () => {
         <img
             src={services_vector_computer} 
             alt="Vector decorativo de fondo" 
-            className="absolute top-0 -right-1/4 h-80 " 
+            className="absolute bottom-0 -right-1/4 h-80 hidden lg:block pointer-events-none" 
         />
     </section>
   )
