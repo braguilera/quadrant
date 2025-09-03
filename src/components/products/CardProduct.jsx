@@ -7,10 +7,10 @@ import { motion } from 'framer-motion'
 
 const CardProduct = ({logifleet=false}) => {
     return (
-    <section className='flex flex-col  items-center justify-center p-4 m-4 '>
+    <section className='flex flex-col items-center justify-center p-4 m-4 '>
         {logifleet 
         ? 
-            <article className="relative ">
+            <article className="relative">
                 <motion.img
                     whileInView={{ y: 20 }}
                     initial={{ y: 60 }}

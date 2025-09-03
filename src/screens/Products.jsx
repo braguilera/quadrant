@@ -7,11 +7,12 @@ import LFmobile from "../assets/LFmobile.png";
 import arrow_first_product from "../assets/products/arrow_first_product.svg";
 import arrow_second_product from "../assets/products/arrow_second_product.svg";
 import CardProduct from "../components/products/CardProduct";
+import CardProductComputer from "../components/products/CardProductComputer";
 
 export default function Products() {
   return (
     <section id="productos" className=" bg-accent relative overflow-x-hidden">
-      <div className="absolute -top-7 -left-20 w-[200%] z-0">
+      <div className="absolute -top-7 -left-20 w-[200%] z-0 xl:w-full">
         <img className="w-full" src={arrow_first_product} alt="Fondo de flecha decorativa" />
       </div>
 
@@ -28,11 +29,16 @@ export default function Products() {
         
       </article>
 
-      <article className="relative z-30">
+      <article className="relative z-30 xl:hidden">
         <CardProduct logifleet={true}/>
         <CardProduct/>
       </article>
-      <div className="absolute bottom-1/4 left-1/2 w-[200%] z-0">
+
+      <article className="relative z-30 hidden xl:block">
+        <CardProductComputer logifleet={true}/>
+        <CardProductComputer/>
+      </article>
+      <div className="absolute bottom-1/4 left-1/2 w-[200%] z-0 xl:w-full">
         <img className="w-full" src={arrow_second_product} alt="Fondo de flecha decorativa" />
       </div>
     </section>
