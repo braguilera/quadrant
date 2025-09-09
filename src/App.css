@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #4035e8; 
   --color-secondary: #d0f04d; 
+  --color-tertiary: #766BD9; 
   --color-accent: #EEFDFD; 
   --breakpoint-smh: 330px
   --font-Gotham: "Gotham", sans-serif; 

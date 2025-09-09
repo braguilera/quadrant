@@ -14,7 +14,7 @@ function App() {
       <Home/>
       <Products />
       <Services />      
-      <CtaSection/>
+
       <AboutUs />
       <Footer/>
     </>
