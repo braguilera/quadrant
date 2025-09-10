@@ -47,65 +47,56 @@ const Services = () => {
   };
 
   return (
-    <section id='servicios' className="relative max-w-7xl mx-auto px-6 pb-12 overflow-x-clip"> 
+    <section id='servicios' className="relative h-screen flex bg-white flex-col"> 
+        <article className="relative ml-20 mt-16 gap-10 flex items-center z-10">
+          <img
+              src={services_vector} 
+              alt="Vector decorativo de fondo" 
 
-        <div className="relative flex flex-col items-center z-10 xl:flex-row">
-          <article className='self-start'>
+          />
+            <div className='flex flex-col max-w-4xl gap-4'>
+
             <motion.h2
-                className="pt-5 text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
+                className=" text-7xl w-4xl pt-32 font-display font-bold text-gray-600/90 "
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                Nuestros
                 <span
-                    className='text-primary bg-secondary py-1 px-3 ml-2 rounded-xl'
+                    className='text-primary bg-secondary px-2 mr-3 rounded-xl'
                 >
-                    Servicios
+                  Consultoría
                 </span>
+                para la transformación logística
             </motion.h2>
             <motion.p
-                className='text-gray-600/70 mb-10 text-base'
+                className='text-gray-600/80 w-6xl mb-10 text-3xl'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
             >
-                Ponemos a tu disposición un equipo de expertos listos para transformar tus desafíos logísticos en ventajas competitivas.
+              Antes de implementar, escuchamos y entendemos tu operación. 
+              <span
+                className='font-bold px-2'
+              >
+                Diseñamos 
+              </span>
+              la hoja de ruta que 
+              <span
+                className='font-bold px-2'
+              >
+                conecta tus procesos 
+              </span>
+              con la tecnología adecuada para transformar tu operación.  
             </motion.p>
-          </article>
-
-            <motion.article
-                className='relative flex flex-col gap-4 items-center w-full md:grid md:grid-cols-2' 
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                {ourServices.map((service, index) => (
-                <motion.div key={index} variants={itemVariants}>
-                    <CardServices
-                        title={service.title}
-                        description={service.description}
-                        Icon={service.Icon} 
-                        index={index}
-                    />
-                </motion.div>
-                ))}
-                <div className="absolute inset-0 -z-10 pointer-events-none lg:hidden">
-                  <img
-                      src={services_vector} 
-                      alt="Vector decorativo de fondo" 
-                      className="block xl:hidden absolute top-0 -left-20 md:w-1/2 w-3/4" 
-                  />
-                </div>
-            </motion.article>
-        </div>
+            </div>
+        </article>
         <img
             src={services_vector_computer} 
             alt="Vector decorativo de fondo" 
-            className="absolute bottom-0 -right-1/4 h-80 hidden lg:block pointer-events-none" 
+            className="pointer-events-none absolute bottom-20 -left-10 w-2/3" 
         />
     </section>
   )
