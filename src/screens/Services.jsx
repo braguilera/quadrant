@@ -48,7 +48,19 @@ const Services = () => {
 
   return (
     <section id='servicios' className="relative h-screen flex bg-white flex-col"> 
-        <article className="relative ml-20 mt-16 gap-10 flex items-center z-10">
+      <article className=" w-full px-4 flex items-end justify-end z-30">
+        <motion.h2
+          className="py-3 px-20 text-5xl font-bold text-white bg-primary w-fit rounded-br-3xl rounded-bl-3xl"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Consultoría
+        </motion.h2>
+        
+      </article>
+        <article className="relative ml-20 gap-10 flex items-center z-10">
           <img
               src={services_vector} 
               alt="Vector decorativo de fondo" 

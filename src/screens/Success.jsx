@@ -1,17 +1,126 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+
+import sucess_video from '../assets/success/success_video.mp4';
+import video_portrait from '../assets/success/video_portrait.png';
+import Succes_img1 from '../assets/success/succes_img1.jpg';
+import Succes_img2 from '../assets/success/succes_img2.jpg';
+import Succes_img3 from '../assets/success/succes_img3.jpg';
+import Succes_img4 from '../assets/success/succes_img4.jpg';
+import Succes_img5 from '../assets/success/succes_img5.jpg';
+import Succes_img6 from '../assets/success/succes_img6.jpg';
+import Succes_img7 from '../assets/success/succes_img7.jpg';
+import Succes_img8 from '../assets/success/succes_img8.jpg';
+import Button from '../ui/Button';
+import { Check } from 'lucide-react';
 
 const Success = () => {
-  return (
-    <section
-      className='h-screen flex flex-col bg-white px-8 py-20'
-    >
-      <article
-        className='m-auto text-center px-6 bg-primary w-full h-full rounded-b-3xl'
-      >
+  const images = [Succes_img1, Succes_img2, Succes_img3, Succes_img4, Succes_img5, Succes_img6, Succes_img7, Succes_img8];
 
-      </article>
+  const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' }, [
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  ]);
+
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+  };
+
+  const leftPanelVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+  };
+  
+  const videoVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut', delay: 0.2 } }
+  };
+
+  const carouselContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.5 } }
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  };
+
+  return (
+    <section id="casos-de-exito" className='h-screen flex flex-col bg-white px-8 py-20'>
+      <motion.article
+        className='m-auto text-center px-6 bg-primary w-full h-full rounded-b-3xl flex '
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.article
+          className='w-1/3 relative flex flex-col gap-4 px-4 justify-center items-start'
+          variants={leftPanelVariants}
+        >
+          <aside className='bg-secondary absolute -left-10 top-1/5 text-primary px-20 py-1 rounded-r-full shadow-md'>
+            <p className='text-4xl font-bold'>Casos de éxito</p>
+            <Check className='text-secondary bg-primary p-2 rounded-full absolute right-1 top-1/2 -translate-y-1/2 h-10 w-10' />
+          </aside>
+          <h2 className='text-4xl font-bold text-white pt-10'>
+            EMSA Logística.
+          </h2>
+          <p className='text-white text-start'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut urna dui, dictum eu molestie eget, malesuada eleifend lorem. Proin molestie luctus lorem, vel mattis justo vehicula et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum purus et auctor vehicula. Vivamus nisi mauris, ultricies sit amet accumsan at, sollicitudin eu nibh. Phasellus volutpat sapien sodales, efficitur ipsum vitae, suscipit felis. Mauris ex libero, porta id ante.
+          </p>
+          <Button variant='case-study'>
+            Sé nuestro próximo caso de éxito
+          </Button>
+        </motion.article>
+        
+        <aside className='w-2/3 h-full flex flex-col p-8 gap-6'>
+          <motion.div 
+            className="w-full h-3/4 rounded-2xl overflow-hidden shadow-2xl"
+            variants={videoVariants}
+          >
+            <video 
+              className="w-full h-full object-cover" 
+              controls 
+              poster={video_portrait}
+            >
+              <source src={sucess_video} type="video/mp4" />
+              Tu navegador no soporta el tag de video.
+            </video>
+          </motion.div>
+          
+          <motion.div 
+            className="overflow-hidden w-full h-1/4" 
+            ref={emblaRef}
+            variants={carouselContainerVariants}
+          >
+            <div className="flex h-full">
+              {images.map((imgSrc, index) => (
+                <motion.div 
+                  key={index} 
+                  className="relative flex-[0_0_25%] h-full pr-4"
+                  variants={imageVariants}
+                >
+                  {/* MEJORA 1: Sombra agregada aquí */}
+                  <div className='w-full h-full rounded-xl overflow-hidden shadow-lg'>
+                    <img
+                      className='w-full h-full object-cover'
+                      src={imgSrc}
+                      alt={`Caso de éxito imagen ${index + 1}`}
+                      // MEJORA 2: Lazy loading para optimizar la carga
+                      loading="lazy"
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </aside>
+      </motion.article>
     </section>
   )
 }
 
-export default Success
+export default Success;
