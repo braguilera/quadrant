@@ -1,91 +1,137 @@
-import React from 'react';
-import { motion } from "framer-motion";
-import imagen_example from '../assets/aboutUs/imagen_example.png';
-import aboutUs_arrow from '../assets/aboutUs/aboutUs_arrow.svg';
-import aboutUs_arrow_computer from '../assets/aboutUs/aboutUs_arrow_computer.svg';
-
-import CardAboutUs from '../components/aboutUs/CardAboutUs';
-import { Truck, Bug, SquareTerminal } from 'lucide-react'; 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
+import about_us_img from '../assets/aboutUs/about_us_img.jpg';
+import quadrant_logo from '../assets/aboutUs/quadrant_logo.svg';
+import { ArrowRight, ChevronLeft } from 'lucide-react';
 
 const AboutUs = () => {
+  const [showValues, setShowValues] = useState(false);
 
-  const statsData = [
+  const valuesData = [
     {
-      number: "+30",
-      title: "Años de Logística",
-      description: "Ofreciendo soluciones adaptadas a las necesidades específicas de cada cliente.",
-      Icon: Truck,
+      title: "Sobre Tecnología, Innovación y Producto",
+      description: "Nos impulsa la pasión por crear y explorar soluciones basadas en tecnologías emergentes, anticipándonos a los desafíos de la logística. Perseguimos siempre la excelencia técnica, la robustez y la eficiencia en cada línea de código. Entendemos que la eficiencia es también nuestra contribución a un mundo más sustentable."
     },
     {
-      number: "+20",
-      title: "Años de Software",
-      description: "Entregando productos de calidad excepcional que satisfacen las necesidades más exigentes.",
-      Icon: Bug,
+      title: "Sobre Nuestros Clientes",
+      description: "Practicamos la honestidad y la transparencia. Somos claros y directos en lo que hacemos, y nos dedicamos a entender en profundidad dónde radican sus verdaderos problemas para convertirnos en socios estratégicos."
     },
     {
-      number: "+100",
-      title: "Proyectos Finalizados",
-      description: "Abordando una amplia variedad de desafíos y desarrollando soluciones innovadoras.",
-      Icon: SquareTerminal,
+      title: "Sobre Nuestro Equipo",
+      description: "Creemos firmemente que juntos somos imparables. Nos cuidamos, nos potenciamos y compartimos la convicción de estar construyendo algo grande. Formamos equipos colaborativos que trabajan con comunicación constante, apertura al cambio y foco en encontrar soluciones rápidas y efectivas."
     }
   ];
 
-  return (
-    <section id='nosotros' className="relative p-8 lg:px-36 bg-accent pt-8 flex flex-col md:flex-row gap-10 items-center justify-center">
-      <article className='flex flex-col items-center z-10 max-w-7xl'>
-        <motion.h2
-          className="pt-5 self-start text-3xl lg:text-4xl font-display font-bold text-gray-600/90 mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Sobre
-          <span className='text-primary bg-secondary py-1 px-3 ml-2 rounded-xl'>
-            Nosotros
-          </span>
-        </motion.h2>
-        <motion.p
-            className='text-gray-600/70 mb-10 text-base'
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          En Quadrant, nos apasiona la excelencia en todo lo que hacemos. Nos especializamos en la adaptación de los servicios y tecnologias a las diferentes necesidades de los clientes.
-          Desde nuestros comienzos, nos hemos dedicado a ofrecer soluciones innovadoras y servicios de alta calidad que agregan valor a nuestros clientes y marcan una diferencia en el mundo que nos rodea.
-        </motion.p>
-        
-        <img
-          src={imagen_example}
-          alt="image_example"
-          className='mb-10 rounded-lg shadow-lg xl:w-1/2'
-        />
-      </article>
+  const containerVariants = {
+    visible: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
-      <div className="relative z-0 flex flex-col items-center gap-8 pb-8">
-        {statsData.map((stat, index) => (
-          <CardAboutUs 
-            key={index}
-            number={stat.number}
-            title={stat.title}
-            description={stat.description}
-            Icon={stat.Icon}
-          />
-        ))}
-        
-        <div className="absolute inset-0 h-full -z-10 pointer-events-none">
-            <img
-                src={aboutUs_arrow} 
-                alt="Vector decorativo de fondo para móvil" 
-                className="absolute md:hidden -bottom-20 -left-20 h-full" 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.3, ease: 'easeOut' } }
+  };
+
+
+  return (
+    <section id='nosotros' className="relative p-8 sm:p-16 lg:p-32 bg-white flex items-center justify-center min-h-screen">
+      <div className='flex items-center justify-center w-full max-w-7xl'>
+        <motion.img
+          src={about_us_img}
+          alt="Equipo de Quadrant trabajando"
+          className='hidden lg:block rounded-4xl h-[70vh] w-1/3 object-cover shadow-xl'
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
+        <article className='flex flex-col border lg:border-l-0 p-8 rounded-4xl lg:rounded-l-none lg:rounded-r-4xl border-primary z-10 w-full lg:w-2/3 h-[60vh] bg-white'>
+          <header className='flex items-center justify-start mb-6'>
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold text-gray-700"
+              initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.6 }}
+            >
+              Sobre
+            </motion.h2>
+            <motion.img
+              src={quadrant_logo}
+              alt="Logo de Quadrant"
+              className='h-12 ml-4'
+              initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
             />
-            <img
-                src={aboutUs_arrow_computer} 
-                alt="Vector decorativo de fondo para escritorio" 
-                className="hidden md:block absolute bottom-0 right-20 scale-[2.0] origin-bottom-right" 
-            />
-        </div>
+          </header>
+
+          <div className='flex-grow flex flex-col overflow-hidden relative'>
+            
+            {showValues && (
+              <motion.button
+                layoutId="cta-title"
+                onClick={() => setShowValues(false)}
+                className='flex items-center gap-2 text-primary font-bold text-2xl mb-4 cursor-pointer'
+              >
+                <ChevronLeft /> Nuestros Valores
+              </motion.button>
+            )}
+
+            <AnimatePresence mode="wait">
+              {!showValues ? (
+                <motion.div
+                  key="mainContent"
+                  className='flex-grow'
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <motion.p variants={itemVariants} className='text-lg text-gray-600 mb-6'>
+                    <span className='font-bold'>Somos una empresa de tecnología</span> enfocada en resolver problemas logísticos con plataformas robustas, escalables y ágiles. Con experiencia en sectores clave y un equipo que combina visión comercial y técnica, ayudamos a que la logística se convierta en ventaja competitiva.
+                  </motion.p>
+                  <motion.p variants={itemVariants} className='text-lg text-gray-600 mb-6'>
+                    <span className='font-bold text-primary'>Visión:</span> 
+                    Ser facilitadores de un nuevo paradigma en logística, donde la eficiencia, la escalabilidad y la transparencia permitan a las empresas ser más ágiles, adaptativas, flexibles y sustentables. 
+                  </motion.p>
+                  <motion.p variants={itemVariants} className='text-lg text-gray-600'>
+                    <span className='font-bold text-primary'>Misión:</span>
+                    Ayudar a las organizaciones desde la consultoría, desarrollo e integración tecnológica, en forma segura, efectiva y con visibilidad para la toma de decisiones.
+                  </motion.p>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="valuesContent"
+                  className='flex-grow flex flex-col gap-4 overflow-y-auto'
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  {valuesData.map((value) => (
+                    <motion.div key={value.title} variants={itemVariants}>
+                      <h4 className='font-bold text-primary text-xl'>{value.title}</h4>
+                      <p className='text-gray-600'>{value.description}</p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+            
+            {!showValues && (
+              <motion.button
+                layoutId="cta-title"
+                onClick={() => setShowValues(true)}
+                className='flex items-center gap-2 text-primary font-bold text-lg mt-auto pt-4 cursor-pointer'
+                whileHover={{ gap: '12px' }}
+              >
+                Conocé nuestros valores <ArrowRight />
+              </motion.button>
+            )}
+          </div>
+        </article>
       </div>
     </section>
   )
