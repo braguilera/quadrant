@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import logifleet_logo from '../../assets/products/logifleet_logo.png';
+import logifleet_logo from '../../assets/products/logifleet_logo.webp';
 import haxtrace_logo from '../../assets/products/haxtrace_logo.svg';
-import logifleet_main from '../../assets/products/logifleet_main.png';
-import haxtrace_main from '../../assets/products/haxtrace_main.png';
+import logifleet_main from '../../assets/products/logifleet_main.webp';
+import haxtrace_main from '../../assets/products/haxtrace_main.webp';
 import haxtrace_second from '../../assets/products/haxtrace_second.png';
 import logifleet_secondary from '../../assets/products/logifleet_secondary.png';
-import arrow_logifleet from '../../assets/products/arrow_logifleet.png';
+import arrow_logifleet from '../../assets/products/arrow_logifleet.webp';
 import arrow_haxtrace from '../../assets/products/arrow_haxtrace.png';
 import HighlightsProducts from './HighlightsProducts';
 

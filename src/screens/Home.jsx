@@ -1,7 +1,7 @@
 import RotatingText from "../ui/RotatingText"
 import { motion } from "framer-motion"
 import Q_arrow from "../assets/hero/Q_arrow.svg"
-import hero_desktop from "../assets/hero_desktop.png"
+import hero_desktop from "../assets/hero_desktop.webp"
 import Nav from "../components/Nav"
 import Button from "../ui/Button"
 import { useState } from "react"

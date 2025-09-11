@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import about_us_img from '../assets/aboutUs/about_us_img.jpg';
+import about_us_img from '../assets/aboutUs/about_us_img.webp';
 import quadrant_logo from '../assets/aboutUs/quadrant_logo.svg';
 import { ArrowRight, ChevronLeft } from 'lucide-react';
 

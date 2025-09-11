@@ -20,23 +20,18 @@ const Nav = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
 
-            // Esta es la nueva lógica:
-            // 1. Buscamos la última sección que el usuario ha pasado.
-            let newActiveSection = activeSection; // Empezamos con la sección activa actual.
+            let newActiveSection = activeSection; 
 
             navItems.forEach(item => {
                 const section = document.getElementById(item.id);
                 if (section) {
                     const sectionTop = section.offsetTop - 150;
-                    // Si hemos pasado el inicio de una sección, la consideramos candidata.
                     if (window.scrollY >= sectionTop) {
                         newActiveSection = item.id;
                     }
                 }
             });
 
-            // 2. Solo actualizamos el estado si la sección activa ha cambiado.
-            // Esto evita que se reinicie a 'inicio' innecesariamente.
             if (activeSection !== newActiveSection) {
                 setActiveSection(newActiveSection);
             }
@@ -44,7 +39,7 @@ const Nav = () => {
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [activeSection]); // Agregamos 'activeSection' a las dependencias para una lógica más robusta.
+    }, [activeSection]);
 
     const mobileMenuVariants = {
         open: { clipPath: `circle(150% at 90% 5%)`, transition: { type: "spring", stiffness: 40, restDelta: 2 } },
