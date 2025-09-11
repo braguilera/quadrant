@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import CardServices from '../components/services/CardServices'; 
 import services_vector from '../assets/services/services_vector.svg';
 import services_vector_computer from '../assets/services/services_vector_computer.svg';
-
+import Button from '../ui/Button'
 import { MessagesSquare, CodeXml, Combine, CheckCircle } from 'lucide-react';
 
 const Services = () => {
@@ -98,6 +98,15 @@ const Services = () => {
             alt="Vector decorativo de fondo" 
             className="pointer-events-none absolute bottom-20 -left-10 w-2/3" 
         />
+        <footer
+          className='mt-auto mb-6 flex items-center'
+        >
+        <Button
+          variant='consulting'
+        >
+          Contanos tus problemas logísticos
+        </Button>
+        </footer>
     </section>
   )
 }

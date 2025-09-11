@@ -6,6 +6,7 @@ import Products from './screens/Products'
 import AboutUs from './screens/AboutUs'
 import Services from './screens/Services'
 import Footer from './screens/Footer'
+import Success from './screens/Success'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
       <Home/>
       <Products />
       <Services />      
-
+      <Success />
       <AboutUs />
       <Footer/>
     </>
