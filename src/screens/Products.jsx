@@ -33,6 +33,7 @@ export default function Products() {
 
       <article className="relative z-30 hidden xl:block">
         <CardProductComputer logifleet={true}/>
+        <CardProductComputer />
       </article>
       
     </section>

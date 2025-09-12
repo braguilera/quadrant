@@ -115,7 +115,8 @@ const Nav = () => {
                                     <NavLinks activeSection={activeSection} isScrolled={isScrolled} />
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
-                                    <Button variant='outlineNav' onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
+                                    <Button onClick={() => (setIsOpen(false), setIsFormOpen(true))}
+                                    >
                                         Agenda una reunión
                                     </Button>
                                 </motion.div>
