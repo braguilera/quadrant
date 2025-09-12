@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion";
 import CardServices from '../components/services/CardServices'; 
 import services_vector from '../assets/services/services_vector.svg';
 import services_vector_computer from '../assets/services/services_vector_computer.svg';
 import Button from '../ui/Button'
 import { MessagesSquare, CodeXml, Combine, CheckCircle } from 'lucide-react';
+import ContactFormModal from '../components/ContactFormModal';
+
 
 const Services = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const ourServices=[
     {
@@ -48,6 +51,8 @@ const Services = () => {
 
   return (
     <section id='servicios' className="relative h-screen flex bg-white flex-col"> 
+      <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
       <article className=" w-full px-4 flex items-end justify-end z-30">
         <motion.h2
           className="py-3 px-20 text-5xl font-bold text-white bg-primary w-fit rounded-br-3xl rounded-bl-3xl"
@@ -115,6 +120,7 @@ const Services = () => {
         >
         <Button
           variant='consulting'
+          onClick={() => (setIsFormOpen(true))}
         >
           Contanos tus problemas logísticos
         </Button>

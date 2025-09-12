@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
@@ -15,9 +15,12 @@ import Succes_img7 from '../assets/success/succes_img7.webp';
 import Succes_img8 from '../assets/success/succes_img8.webp';
 import Button from '../ui/Button';
 import { Check } from 'lucide-react';
+import ContactFormModal from '../components/ContactFormModal';
+
 
 const Success = () => {
   const images = [Succes_img1, Succes_img2, Succes_img3, Succes_img4, Succes_img5, Succes_img6, Succes_img7, Succes_img8];
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' }, [
     Autoplay({ delay: 3000, stopOnInteraction: false })
@@ -50,6 +53,8 @@ const Success = () => {
 
   return (
     <section id="casos-de-exito" className='h-screen flex flex-col bg-white px-8 py-20'>
+      <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
       <motion.article
         className='m-auto text-center px-6 bg-primary w-full h-full rounded-b-3xl flex '
         variants={sectionVariants}
@@ -71,7 +76,7 @@ const Success = () => {
           <p className='text-white text-start'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut urna dui, dictum eu molestie eget, malesuada eleifend lorem. Proin molestie luctus lorem, vel mattis justo vehicula et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum purus et auctor vehicula. Vivamus nisi mauris, ultricies sit amet accumsan at, sollicitudin eu nibh. Phasellus volutpat sapien sodales, efficitur ipsum vitae, suscipit felis. Mauris ex libero, porta id ante.
           </p>
-          <Button variant='case-study'>
+          <Button variant='case-study'  onClick={() => (setIsFormOpen(true))}>
             Sé nuestro próximo caso de éxito
           </Button>
         </motion.article>

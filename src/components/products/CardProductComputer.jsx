@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { AlertCircle } from 'lucide-react';
 import logifleet_logo from '../../assets/products/logifleet_logo.webp';
@@ -12,6 +12,8 @@ import arrow_haxtrace from '../../assets/products/arrow_haxtrace.png';
 import HighlightsProducts from './HighlightsProducts';
 import quadrant_logo from '../../assets/products/quadrant_logo.svg'
 import Button from '../../ui/Button'
+import ContactFormModal from '../ContactFormModal';
+
 
 const hoverCardVariants = {
     rest: {
@@ -63,6 +65,9 @@ const textItemVariants = {
 };
 
 const CardProductComputer = ({ logifleet = false }) => {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
+
     const finalImageVariants = {
         ...(logifleet ? imageEntryVariants : { ...imageEntryVariants, hidden: { opacity: 0, y: 300 } }),
         
@@ -114,6 +119,7 @@ const CardProductComputer = ({ logifleet = false }) => {
     ]
     return (
         <section className={`flex flex-col py-4`}>
+            <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
             {logifleet
                 ?
             <article
@@ -228,6 +234,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                     />
                     <Button
                         variant='logifleet'
+                        onClick={() => (setIsFormOpen(true))}
                         className='absolute -top-8 left-1/6'
                     >
                         Llevá tu almacén al siguiente nivel
@@ -323,6 +330,7 @@ const CardProductComputer = ({ logifleet = false }) => {
 
                     <Button
                         variant='haxtrace'
+                        onClick={() => (setIsFormOpen(true))}
                         className='absolute -top-8 left-1/6'
                     >
                         Ver más
