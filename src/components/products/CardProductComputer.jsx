@@ -5,10 +5,10 @@ import logifleet_logo from '../../assets/products/logifleet_logo.webp';
 import haxtrace_logo from '../../assets/products/haxtrace_logo.webp';
 import logifleet_main from '../../assets/products/logifleet_main.webp';
 import haxtrace_main from '../../assets/products/haxtrace_main.webp';
-import haxtrace_second from '../../assets/products/haxtrace_second.png';
-import logifleet_secondary from '../../assets/products/logifleet_secondary.png';
+import haxtrace_second from '../../assets/products/haxtrace_second.webp';
+import logifleet_secondary from '../../assets/products/logifleet_secondary.webp';
 import arrow_logifleet from '../../assets/products/arrow_logifleet.webp';
-import arrow_haxtrace from '../../assets/products/arrow_haxtrace.png';
+import arrow_haxtrace from '../../assets/products/arrow_haxtrace.webp';
 import HighlightsProducts from './HighlightsProducts';
 import quadrant_logo from '../../assets/products/quadrant_logo.svg'
 import Button from '../../ui/Button'
@@ -118,8 +118,7 @@ const CardProductComputer = ({ logifleet = false }) => {
         }
     ]
     return (
-        <section className={`flex flex-col py-4`}>
-            <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+        <section className={`flex flex-col`}>
             {logifleet
                 ?
             <article
@@ -234,10 +233,16 @@ const CardProductComputer = ({ logifleet = false }) => {
                     />
                     <Button
                         variant='logifleet'
-                        onClick={() => (setIsFormOpen(true))}
                         className='absolute -top-8 left-1/6'
                     >
-                        Llevá tu almacén al siguiente nivel
+                        <a
+                            href='#@'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            Llevá tu almacén al siguiente nivel
+                        </a>
+                        
                     </Button>
                 </motion.aside>
             </article>
@@ -330,15 +335,20 @@ const CardProductComputer = ({ logifleet = false }) => {
 
                     <Button
                         variant='haxtrace'
-                        onClick={() => (setIsFormOpen(true))}
                         className='absolute -top-8 left-1/6'
                     >
-                        Ver más
+                        <a
+                            href='#@'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            Ver más
+                        </a>
                     </Button>
                 </motion.footer>
 
                 <motion.aside
-                    className='w-full relative h-34 bg-tertiary my-20 flex gap-6 pl-10 items-center'
+                    className='w-full relative h-34 bg-tertiary mt-20 flex gap-6 pl-10 items-center'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.8 }}

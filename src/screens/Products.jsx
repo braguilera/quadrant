@@ -31,7 +31,7 @@ export default function Products() {
         <CardProduct/>
       </article> */}
 
-      <article className="relative z-30 hidden xl:block">
+      <article className="relative z-30">
         <CardProductComputer logifleet={true}/>
         <CardProductComputer />
       </article>

@@ -90,6 +90,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* O la altura exacta de tu nav, ej: 96px */
 }
 
 @keyframes blob-move {

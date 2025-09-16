@@ -1,23 +1,28 @@
 import './App.css'
+import React, { Suspense } from 'react';
 import CtaSection from './screens/CtaSection'
 import Home from './screens/Home'
-import Partners from './screens/Partners'
-import Products from './screens/Products'
-import AboutUs from './screens/AboutUs'
-import Services from './screens/Services'
-import Footer from './screens/Footer'
-import Success from './screens/Success'
+
+
+const Products = React.lazy(() => import('./screens/Products'));
+const Services = React.lazy(() => import('./screens/Services'));
+const Success = React.lazy(() => import('./screens/Success'));
+const AboutUs = React.lazy(() => import('./screens/AboutUs'));
+const Footer = React.lazy(() => import('./screens/Footer'));
 
 function App() {
 
   return (
     <>
       <Home/>
+      <Suspense fallback={<div>Cargando...</div>}>
+
       <Products />
       <Services />      
       <Success />
       <AboutUs />
       <Footer/>
+      </Suspense>
     </>
   )
 }

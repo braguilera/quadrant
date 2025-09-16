@@ -38,7 +38,7 @@ const AboutUs = () => {
 
 
   return (
-    <section id='nosotros' className="relative p-8 sm:p-16 lg:p-32 bg-white flex items-center justify-center min-h-screen">
+    <section id='nosotros' className="relative p-8 pb-20 bg-white flex items-center justify-center ">
       <div className='flex items-center justify-center w-full max-w-7xl'>
         <motion.img
           src={about_us_img}

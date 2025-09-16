@@ -1,7 +1,8 @@
 import RotatingText from "../ui/RotatingText"
 import { motion } from "framer-motion"
 import Q_arrow from "../assets/hero/Q_arrow.svg"
-import hero_desktop from "../assets/hero_desktop.webp"
+import Q_arrow_mobile from "../assets/hero/Q_2_arrow.svg"
+import hero_desktop from "../assets/hero_desktop.png"
 import Nav from "../components/Nav"
 import Button from "../ui/Button"
 import { useState } from "react"
@@ -24,7 +25,7 @@ const Home = () => {
       <Nav/>
 
       <section
-        className="relative h-full padding-y-smh py-20 pl-60 bg-black/50 flex" 
+        className="relative h-full padding-y-smh py-20 pl-4 lg:pl-60 bg-black/80 flex" 
       >
         <div className="z-10 flex flex-col h-full w-4xl padding-x-smh py-20">
             <motion.div
@@ -75,17 +76,27 @@ const Home = () => {
 
 
               <motion.div
-                className="absolute left-0 bottom-20 z-10 h-4/5" 
+                className="absolute left-0 bottom-0 lg:bottom-20 z-10 h-fit lg:h-4/5" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >
                 <motion.img
-                    className="h-full pointer-events-none"
+                    className="h-full hidden lg:block pointer-events-none"
                     src={Q_arrow}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
+                    fetchPriority="high" 
+                  />
+                <motion.img
+                    className="h-full pointer-events-none lg:hidden"
+                    src={Q_arrow_mobile}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    fetchPriority="high" 
                   />
               </motion.div>
             </motion.div>

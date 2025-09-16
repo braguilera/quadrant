@@ -77,7 +77,7 @@ const Nav = () => {
                     </aside>
                     
                     <div className={`hidden md:flex items-center gap-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-                        <Button variant='outlineNav' onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
+                        <Button variant='nav' onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
                             Agenda una reunión
                         </Button>
                     </div>
