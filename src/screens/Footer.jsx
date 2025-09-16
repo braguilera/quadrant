@@ -57,7 +57,7 @@ const Footer = () => {
                 Contactate con nuestro equipo
               </h2>
               <p className='text-xl text-gray-300'>
-                Nuestro equipo está listo para analizar tus desafíos. Agendá una demo gratuita y descubrí el potencial de nuestras soluciones.
+                Nuestro equipo está listo para analizar tus desafíos. Agendá una reunión y descubrí el potencial de nuestras soluciones.
               </p>
             </motion.div>
             
@@ -68,7 +68,7 @@ const Footer = () => {
                 variant='consulting'
                 className=" font-bold text-xl px-8 py-4"
               >
-                Agendá una demo
+                Agendá una reunión
               </Button>
               <div className='flex items-center gap-6 text-gray-300'>
                 <a href="mailto:web@quadrant.com.ar" target="_blank" rel="noopener noreferrer" className='flex items-center gap-2 hover:text-secondary transition-colors'>
@@ -84,11 +84,11 @@ const Footer = () => {
           </div>
 
           <motion.div 
-            className='flex flex-col md:flex-row justify-between items-center gap-6 pt-12 mt-12 border-t border-white/20'
+            className='flex flex-col md:flex-row justify-between items-center gap-6 pt-6 lg:pt-12 mt-6 lg:mt-12 border-t border-white/20'
             variants={itemVariants}
           >
             <p className='text-gray-400 text-sm'>COPYRIGHT © Quadrant, 2025</p>
-            <div className='hidden md:block'>
+            <div className='block'>
               <NavLinks variant="gray" />
             </div>
             <a href="https://www.linkedin.com/company/quadrantsaas" target='_blank' rel="noopener noreferrer" aria-label="LinkedIn de Quadrant">

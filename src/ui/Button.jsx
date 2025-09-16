@@ -9,19 +9,19 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
     hover: { rotate: 45, transition: { duration: 0.3, ease: "easeOut" } }
   };
 
-  const baseStyles = "inline-flex items-center justify-center gap-4 px-6 py-2 font-bold transition-colors duration-300 cursor-pointer";
+  const baseStyles = "inline-flex items-center justify-center gap-4 px-4 lg:px-6 py-2 font-bold transition-colors duration-300 cursor-pointer";
 
   const variantStyles = {
     'case-study': {
-      button: "relative py-3 bg-white text-primary shadow-md rounded-xl pr-10 text-xl mt-4 hover:bg-secondary hover:text-primary ",
-      circle: "absolute shadow-md -right-6 scale-130 border-3 border-secondary bg-primary",
+      button: "relative py-1 lg:py-3 bg-white text-primary shadow-md rounded-xl mr-5 lg:mr-0 pr-8 lg:pr-10 text-sm lg:text-xl lg:mt-4 hover:bg-secondary hover:text-primary ",
+      circle: "absolute shadow-md -right-6 lg:scale-130 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },
     'nav': {
       button: "relative border border-secondary py-1 text-white rounded-full shadow-md text-xl hover:bg-secondary hover:text-primary ",
     },
     'consulting': {
-      button: "relative py-3 bg-white text-primary border border-primary pr-10 rounded-xl shadow-md mx-auto hover:bg-primary hover:text-white",
+      button: "relative py-3 bg-white text-primary border border-primary mr-12 lg:mr-0 pr-10 rounded-xl shadow-md mx-auto hover:bg-primary hover:text-white",
       circle: "absolute shadow-md -right-6 scale-130 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },

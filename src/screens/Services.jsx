@@ -50,12 +50,12 @@ const Services = () => {
   };
 
   return (
-    <section id='servicios' className="relative h-screen flex bg-white flex-col"> 
+    <section id='servicios' className="relative h-[450px] lg:h-screen flex bg-white flex-col"> 
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
       <article className=" w-full px-4 flex items-end justify-end z-30">
         <motion.h2
-          className="py-3 px-20 text-5xl font-bold text-white bg-primary w-fit rounded-br-3xl rounded-bl-3xl"
+          className="py-3 px-10 lg:px-20 text-2xl lg:text-5xl font-bold text-white bg-primary w-fit rounded-br-3xl rounded-bl-3xl"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -65,44 +65,43 @@ const Services = () => {
         </motion.h2>
         
       </article>
-        <article className="relative ml-20 gap-10 flex items-center z-10">
+        <article className="relative ml-2 lg:ml-20 gap-2 lg:gap-10 flex items-start lg:items-center z-10">
           <img
               src={services_vector} 
               alt="Vector decorativo de fondo" 
-
+              className='w-1/4 mt-10 lg:mt-0'
           />
-            <div className='flex flex-col max-w-4xl gap-4'>
-
+          <div className='flex flex-col max-w-4xl gap-4'>
             <motion.h2
-                className=" text-7xl w-4xl pt-32 font-display font-bold text-gray-600/90 "
+                className="text-xl lg:text-7xl w-60 lg:w-4xl pt-10 lg:pt-32 font-display font-bold text-gray-600/90 "
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
                 <span
-                    className='text-primary bg-secondary px-2 mr-3 rounded-xl'
+                    className='text-primary bg-secondary px-2 mr-1 lg:mr-3 rounded-md lg:rounded-xl'
                 >
                   Consultoría
                 </span>
                 para la transformación logística
             </motion.h2>
             <motion.p
-                className='text-gray-600/80 w-6xl mb-10 text-3xl'
+                className='text-gray-600/80 w-60 text-sm lg:w-6xl mb-10 lg:text-3xl'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Antes de implementar, escuchamos y entendemos tu operación. 
+              Antes de implementar, escuchamos y entendemos tu operación.
               <span
-                className='font-bold px-2'
+                className='font-bold px-1 lg:px-2'
               >
                 Diseñamos 
               </span>
               la hoja de ruta que 
               <span
-                className='font-bold px-2'
+                className='font-bold px-1 lg:px-2'
               >
                 conecta tus procesos 
               </span>
@@ -113,10 +112,10 @@ const Services = () => {
         <img
             src={services_vector_computer} 
             alt="Vector decorativo de fondo" 
-            className="pointer-events-none absolute bottom-20 -left-10 w-2/3" 
+            className="pointer-events-none absolute bottom-18 lg:bottom-20 -left-10 lg:w-2/3" 
         />
         <footer
-          className='mt-auto mb-6 flex items-center'
+          className='mt-auto lg:mb-6 flex items-center'
         >
         <Button
           variant='consulting'
