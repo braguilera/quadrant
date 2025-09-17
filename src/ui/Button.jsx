@@ -13,7 +13,7 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
 
   const variantStyles = {
     'case-study': {
-      button: "relative py-1 lg:py-3 bg-white text-primary shadow-md rounded-xl mr-5 lg:mr-0 pr-8 lg:pr-10 text-sm lg:text-xl lg:mt-4 hover:bg-secondary hover:text-primary ",
+      button: "relative py-1 lg:py-3 bg-white text-primary shadow-md rounded-xl mr-5 lg:mr-0 pr-8 lg:pr-10 text-sm lg:text-base 2xl:text-xl lg:mt-4 hover:bg-secondary hover:text-primary ",
       circle: "absolute shadow-md -right-6 lg:scale-130 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },

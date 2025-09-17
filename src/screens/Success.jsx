@@ -51,7 +51,7 @@ const Success = () => {
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
       <motion.article
-        className='m-auto text-center px-2 lg:px-6 bg-primary w-full h-full rounded-b-3xl flex flex-col lg:flex-row '
+        className='m-auto text-center px-2 min-[550px]:px-6 bg-primary w-full h-full rounded-b-3xl flex flex-col lg:flex-row '
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -61,9 +61,9 @@ const Success = () => {
           className='lg:w-1/3 relative flex flex-col gap-4 px-4 justify-center items-start'
           variants={leftPanelVariants}
         >
-          <aside className='bg-secondary absolute -left-8 lg:-left-10 top-4 lg:top-1/5 text-primary px-10 lg:px-20 py-1 rounded-r-full shadow-md'>
-            <p className='text-xl lg:text-4xl font-bold'>Casos de éxito</p>
-            <Check className='text-secondary bg-primary p-1 lg:p-2 rounded-full absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 lg:h-10 lg:w-10' />
+          <aside className='bg-secondary absolute -left-8 lg:-left-10 top-4 lg:top-10 text-primary px-10 lg:px-20 py-1 rounded-r-full shadow-md'>
+            <p className='text-xl lg:text-2xl xl:text-4xl font-bold'>Casos de éxito</p>
+            <Check className='text-secondary bg-primary p-1 lg:p-2 rounded-full absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 xl:h-10 xl:w-10' />
           </aside>
           <h2 className='text-3xl lg:text-4xl font-bold text-white pt-16 lg:pt-10'>
             EMSA Logística.
@@ -103,7 +103,7 @@ const Success = () => {
               {images.slice(0, 4).map((imgSrc, index) => (
                 <motion.div 
                   key={index} 
-                  className="relative w-full aspect-square lg:aspect-video"
+                  className="relative w-full aspect-square min-[550px]:aspect-video"
                   variants={imageVariants}
                 >
                   <div className='w-full h-full rounded-lg lg:rounded-xl overflow-hidden shadow-lg'>
