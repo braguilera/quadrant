@@ -51,7 +51,7 @@ const Services = () => {
   };
 
   return (
-    <section id='servicios' className="relative h-[450px] lg:h-auto flex bg-white flex-col"> 
+    <section id='servicios' className="relative h-[450px] mb-20 sm:h-auto flex bg-white flex-col"> 
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
       <article className=" w-full px-4 flex items-end justify-end z-30">
@@ -72,9 +72,9 @@ const Services = () => {
             alt="Vector decorativo de fondo" 
             className='w-1/4 mt-4 lg:mt-0'
         />
-        <div className='flex flex-col max-w-4xl gap-4'>
+        <div className='flex flex-col gap-4'>
           <motion.h2
-              className="text-xl lg:text-7xl w-60 lg:w-4xl pt-10 lg:pt-32 font-display font-bold text-gray-600/90 "
+              className="text-xl lg:text-7xl w-60 lg:w-full pt-10 lg:pt-32 font-display font-bold text-gray-600/90 "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -88,7 +88,7 @@ const Services = () => {
               para la transformación logística
           </motion.h2>
           <motion.p
-              className='text-gray-600/80 w-full hidden lg:block text-sm lg:w-6xl mb-10 lg:text-3xl'
+              className='text-gray-600/80 w-full hidden lg:block lg:pr-4 text-sm lg:w-full mb-10 lg:text-xl'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -134,15 +134,15 @@ const Services = () => {
       <img
           src={services_vector_computer} 
           alt="Vector decorativo de fondo" 
-          className="hidden lg:block pointer-events-none bottom-18 lg:bottom-20 -left-10 lg:w-3/4" 
+          className="hidden min-[700px]:block pointer-events-none min-[700px]:w-3/4" 
       />
       <img
           src={services_vector_mobile} 
           alt="Vector decorativo de fondo" 
-          className="block lg:hidden pointer-events-none absolute bottom-18 lg:bottom-20 left-0" 
+          className="block min-[700px]:hidden min-[400px]:w-3/4 pointer-events-none" 
       />
       <footer
-        className='lg:my-6 flex w-full justify-center items-center'
+        className='lg:my-6 flex w-full absolute -bottom-10 min-[550px]:-bottom-18 min-[600px]:-bottom-20 lg:-bottom-28 justify-center pr-8'
       >
         <Button
           variant='consulting'

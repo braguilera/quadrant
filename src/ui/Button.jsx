@@ -21,7 +21,7 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
       button: "relative border border-secondary py-1 text-white rounded-full shadow-md text-xl hover:bg-secondary hover:text-primary ",
     },
     'consulting': {
-      button: "relative py-3 bg-white text-primary border border-primary lg:ml-0 rounded-xl shadow-md hover:bg-primary hover:text-white",
+      button: "relative py-3 bg-white text-primary border border-primary lg:ml-0 rounded-xl shadow-md hover:bg-primary hover:text-white text-xs px-8 lg:text-base",
       circle: "absolute shadow-md -right-9 scale-130 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },

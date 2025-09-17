@@ -47,7 +47,7 @@ const Success = () => {
   };
 
   return (
-    <section id="casos-de-exito" className='lg:h-screen flex flex-col bg-white px-8 py-20'>
+    <section id="casos-de-exito" className='lg:h-screen flex flex-col bg-white px-2 min-[500px]:px-6 py-20'>
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
       <motion.article
