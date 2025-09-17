@@ -125,7 +125,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                 className="relative flex flex-col"
             >
                 <motion.div
-                    className='relative text-gray-500 text-base px-10 z-30 flex w-full'
+                    className='relative text-gray-500 text-base px-2 lg:px-10 z-30 flex flex-col lg:flex-row w-full'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
@@ -137,14 +137,14 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <motion.img
                         src={logifleet_main}
                         alt="LogiFleet Mobile"
-                        className='z-20 h-[600px] w-fit'
+                        className='z-20 lg:h-[600px] hidden lg:block w-1/2 lg:w-fit'
                         variants={{
                             hidden: { opacity: 0, x: -50 },
                             visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } }
                         }}
                     />
                     <motion.aside 
-                        className='flex flex-col gap-4 mt-30 relative justify-center'
+                        className='flex flex-col gap-4 lg:mt-30 relative justify-center'
                         variants={{
                             hidden: {},
                             visible: { transition: { staggerChildren: 0.15 } }
@@ -153,14 +153,27 @@ const CardProductComputer = ({ logifleet = false }) => {
                         <motion.img 
                             src={logifleet_logo} 
                             alt="LogiFleet Logo" 
-                            className='w-92 mb-2 bg-secondary py-4 px-8 pl-20 rounded-tr-xl absolute top-0 -left-15' 
+                            className='w-72 lg:w-92 mb-2 bg-secondary py-4 px-8 pl-20 rounded-tr-xl absolute top-0 -left-15' 
                             variants={textItemVariants}
                         />
-                        <motion.h2 className='text-6xl w-2xl font-bold ml-8' variants={textItemVariants}>
-                            Gestión integral de almacenes (WMS)
-                        </motion.h2>
+                        <aside
+                            className='flex  mt-20 lg:mt-0 items-center justify-center'
+                        >
+                            <motion.img
+                                src={logifleet_main}
+                                alt="LogiFleet Mobile"
+                                className='z-20 lg:h-[600px] block lg:hidden w-1/2 lg:w-fit'
+                                variants={{
+                                    hidden: { opacity: 0, x: -50 },
+                                    visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } }
+                                }}
+                            />
+                            <motion.h2 className='text-3xl w-52 lg:text-6xl lg:w-2xl font-bold ml-8' variants={textItemVariants}>
+                                Gestión integral de almacenes (WMS)
+                            </motion.h2>
+                        </aside>
                         <motion.div
-                            className='text-lg font-Gotham ml-8 flex gap-4 font-semibold'
+                            className='text-sm lg:text-lg font-Gotham lg:ml-8 flex flex-wrap gap-2 lg:gap-4 font-semibold'
                             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
                         >
                             {tags.map((tag, index) => (
@@ -170,7 +183,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                             ))}
                         </motion.div>
                         <motion.aside
-                            className='absolute -bottom-20 w-auto -right-40 border border-red-800 px-8 py-4 rounded-xl text-red-800 bg-white shadow-lg'
+                            className='relative mx-4 lg:mx-0 lg:absolute lg:-bottom-20 w-auto lg:-right-40 border border-red-800 px-4 lg:px-8 py-4 rounded-xl text-red-800 bg-white shadow-lg'
                             variants={{
                                 hidden: { opacity: 0, scale: 0.7 },
                                 visible: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.5, ease: 'easeOut' } }
@@ -181,11 +194,11 @@ const CardProductComputer = ({ logifleet = false }) => {
                                     <AlertCircle className='h-7 w-7 bg-red-800 rounded-full' strokeWidth={2.5} />
                                 </div>
                             </div>
-                            <h3 className='text-xl font-bold text-center'>¿Tenés problemas como estos?</h3>
+                            <h3 className='lg:text-xl font-bold text-center'>¿Tenés problemas como estos?</h3>
                             <ul className='mt-2 space-y-2'>
-                                <li className='flex items-start gap-2'><AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Dificultad en el seguimiento de productos por lote.</span></li>
-                                <li className='flex items-start gap-2'><AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Errores en picking y despachos.</span></li>
-                                <li className='flex items-start gap-2'><AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Stock inexacto o desactualizado.</span></li>
+                                <li className='flex items-start gap-2 text-xs lg:text-base'><AlertCircle className="h-4 w-4 lg:h-5 lg:w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Dificultad en el seguimiento de productos por lote.</span></li>
+                                <li className='flex items-start gap-2 text-xs lg:text-base'><AlertCircle className="h-4 w-4 lg:h-5 lg:w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Errores en picking y despachos.</span></li>
+                                <li className='flex items-start gap-2 text-xs lg:text-base'><AlertCircle className="h-4 w-4 lg:h-5 lg:w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Stock inexacto o desactualizado.</span></li>
                             </ul>
                         </motion.aside>
                     </motion.aside>
@@ -201,7 +214,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <motion.img
                         src={arrow_logifleet}
                         alt="Flecha decorativa"
-                        className='w-1/2 z-0'
+                        className='w-3/4 lg:w-1/2 z-0'
                         variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: 'easeOut' }}}}
                     />
                     <motion.div 
@@ -217,7 +230,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                 </motion.footer>
 
                 <motion.aside
-                    className='w-full relative h-24 bg-secondary my-20 flex items-center'
+                    className='w-full relative h-24 bg-secondary my-60 lg:my-20 flex items-center'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.8 }}
@@ -229,11 +242,11 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <img
                         src={logifleet_secondary}
                         alt='Computadora con el programa de Logifleet'
-                        className='absolute bottom-10 right-10 z-20'
+                        className='absolute w-3/4 lg:w-full bottom-4 lg:bottom-10 right-12 lg:right-10 z-20'
                     />
                     <Button
                         variant='logifleet'
-                        className='absolute -top-8 left-20'
+                        className='absolute -top-52 lg:-top-8 left-10 lg:left-20'
                     >
                         <a
                             href='#@'
