@@ -142,7 +142,7 @@ const Services = () => {
           className="block lg:hidden pointer-events-none absolute bottom-18 lg:bottom-20 left-0" 
       />
       <footer
-        className='mt-auto lg:my-6 flex items-center justify-center'
+        className='lg:my-6 flex w-full justify-center items-center'
       >
         <Button
           variant='consulting'
