@@ -27,7 +27,7 @@ const Home = () => {
       <section
         className="relative h-full padding-y-smh py-20 pl-4 lg:pl-60 bg-black/80 flex" 
       >
-        <div className="z-10 flex flex-col h-full w-4xl padding-x-smh py-20">
+        <div className="z-10 flex flex-col h-full w-4xl padding-x-smh py-14">
             <motion.div
               className="space-y-8"
               initial="hidden"
@@ -76,7 +76,7 @@ const Home = () => {
 
 
               <motion.div
-                className="absolute left-0 bottom-0 lg:bottom-20 z-10 h-fit lg:h-4/5" 
+                className="absolute left-0 bottom-10 lg:bottom-20 z-10 h-fit lg:h-4/5" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >

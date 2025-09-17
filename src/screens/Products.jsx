@@ -31,7 +31,7 @@ export default function Products() {
         <CardProduct/>
       </article> */}
 
-      <article className="relative z-30">
+      <article className="flex flex-col gap-20 mt-20 relative z-30">
         <CardProductComputer logifleet={true}/>
         <CardProductComputer />
       </article>

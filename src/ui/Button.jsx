@@ -21,17 +21,17 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
       button: "relative border border-secondary py-1 text-white rounded-full shadow-md text-xl hover:bg-secondary hover:text-primary ",
     },
     'consulting': {
-      button: "relative py-3 bg-white text-primary border border-primary mr-12 lg:mr-0 pr-10 rounded-xl shadow-md mx-auto hover:bg-primary hover:text-white",
+      button: "relative py-3 bg-white text-primary border border-primary mr-12 lg:ml-0 pr-10 rounded-xl shadow-md mx-auto hover:bg-primary hover:text-white",
       circle: "absolute shadow-md -right-6 scale-130 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },
     'logifleet': {
-      button: "relative py-3 bg-primary font-semibold pr-10 text-white border rounded-xl border-primary shadow-md hover:bg-white hover:text-primary text-4xl",
+      button: "relative py-3 bg-primary font-semibold pr-10 text-white border w-1/3 rounded-xl border-primary shadow-md hover:bg-white hover:text-primary text-3xl",
       circle: "absolute shadow-md -right-10 scale-180 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },
     'haxtrace': {
-      button: "relative py-3 bg-tertiary font-semibold pr-10 text-white rounded-xl hover:bg-white hover:text-tertiary text-4xl shadow-[-5px_5px_0px_theme(colors.secondary)] transition-all duration-200 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:border hover:border-tertiary",
+      button: "relative py-3 bg-tertiary font-semibold pr-10 text-white rounded-xl hover:bg-white hover:text-tertiary text-3xl shadow-[-5px_5px_0px_theme(colors.secondary)] transition-all duration-200 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:border hover:border-tertiary",
       circle: "absolute shadow-md -right-10 scale-180 border-3 border-secondary bg-tertiary",
       arrow: "text-white"
     }

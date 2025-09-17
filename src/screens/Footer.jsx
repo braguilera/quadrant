@@ -32,7 +32,7 @@ const Footer = () => {
       
       <motion.footer
         id="contacto"
-        className='relative mx-auto text-white bg-[#474747] overflow-x-hidden' // Usamos overflow-x-hidden para ser más específicos
+        className='relative mx-auto text-white bg-[#474747] overflow-x-hidden'
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -46,12 +46,11 @@ const Footer = () => {
         <img
           src={quadrant_logo_min}
           alt="Quadrant Logo"
-          className="absolute bottom-0 h-11/12 right-1/6 pointer-events-none"
+          className="absolute bottom-0 right-4 h-1/3 lg:h-11/12 lg:right-1/6 pointer-events-none"
         />
         <div className='max-w-7xl mx-auto px-8 py-16 z-10 relative'>
           <div className='flex flex-col lg:flex-row items-center justify-start gap-12'>
             
-            {/* CORREGIDO: w-full en móvil, lg:w-1/2 en escritorio */}
             <motion.div className='w-full lg:w-1/2 text-center lg:text-left' variants={itemVariants}>
               <h2 className='text-5xl lg:text-6xl font-bold mb-4'>
                 Contactate con nuestro equipo
@@ -61,7 +60,6 @@ const Footer = () => {
               </p>
             </motion.div>
             
-            {/* CORREGIDO: w-full en móvil, lg:w-1/2 en escritorio */}
             <motion.div className='flex flex-col w-full lg:w-1/2 items-center justify-center gap-6' variants={itemVariants}>
               <Button 
                 onClick={() => setIsFormOpen(true)}

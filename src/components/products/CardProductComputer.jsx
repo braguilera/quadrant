@@ -233,7 +233,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                     />
                     <Button
                         variant='logifleet'
-                        className='absolute -top-8 left-1/6'
+                        className='absolute -top-8 left-20'
                     >
                         <a
                             href='#@'
