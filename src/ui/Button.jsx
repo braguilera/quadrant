@@ -31,8 +31,8 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
       arrow: "text-white"
     },
     'haxtrace': {
-      button: "relative py-3 bg-tertiary font-semibold pr-10 text-white rounded-xl hover:bg-white hover:text-tertiary text-3xl shadow-[-5px_5px_0px_theme(colors.secondary)] transition-all duration-200 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:border hover:border-tertiary",
-      circle: "absolute shadow-md -right-10 scale-180 border-3 border-secondary bg-tertiary",
+      button: "relative lg:py-3 bg-tertiary font-semibold pr-8 lg:pr-10 text-white rounded-xl hover:bg-white hover:text-tertiary text-xl lg:text-3xl shadow-[-5px_5px_0px_theme(colors.secondary)] transition-all duration-200 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:border hover:border-tertiary",
+      circle: "absolute shadow-md -right-8 lg:-right-10 scale-120 lg:scale-180 border-3 border-secondary bg-tertiary",
       arrow: "text-white"
     }
   };

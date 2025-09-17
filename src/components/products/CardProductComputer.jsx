@@ -230,7 +230,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                 </motion.footer>
 
                 <motion.aside
-                    className='w-full relative h-24 bg-secondary my-60 lg:my-20 flex items-center'
+                    className='w-full relative h-24 bg-secondary mt-60 lg:my-20 flex items-center'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.8 }}
@@ -263,6 +263,12 @@ const CardProductComputer = ({ logifleet = false }) => {
             <article
                 className="relative flex flex-col"
             >
+                <motion.img 
+                    src={haxtrace_logo} 
+                    alt="LogiFleet Logo" 
+                    className='w-60 block lg:hidden lg:w-92 h-fit mb-2 pl-10 lg:pl-20 p-4 bg-tertiary rounded-tr-xl' 
+                    variants={textItemVariants}
+                />
                 <motion.div
                     className='relative text-gray-500 text-base z-30 flex w-full'
                     initial="hidden"
@@ -276,13 +282,13 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <motion.img 
                         src={haxtrace_logo} 
                         alt="LogiFleet Logo" 
-                        className='w-92 h-fit mb-2 pl-20 p-4 bg-tertiary rounded-tr-xl' 
+                        className='w-60 lg:w-92 h-fit hidden lg:block mb-2 pl-10 lg:pl-20 p-4 bg-tertiary rounded-tr-xl' 
                         variants={textItemVariants}
                     />
                     <motion.img
                         src={haxtrace_main}
                         alt="LogiFleet Mobile"
-                        className='z-20 h-[600px] w-fit'
+                        className='z-20 w-1/2 lg:h-[600px] lg:w-fit'
                         variants={{
                             hidden: { opacity: 0, x: -50 },
                             visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } }
@@ -295,11 +301,16 @@ const CardProductComputer = ({ logifleet = false }) => {
                             visible: { transition: { staggerChildren: 0.15 } }
                         }}
                     >
-                        <motion.h2 className='text-6xl w-xl font-bold text-tertiary' variants={textItemVariants}>
-                            Trazabilidad de mercadería en tiempo real
+                        <motion.h2 className='text-2xl lg:text-6xl w-44 lg:w-xl font-bold ' variants={textItemVariants}>
+                            Trazabilidad 
+                            <span
+                                className='text-tertiary pl-1 lg:pl-3'
+                            >
+                                de mercadería en tiempo real
+                            </span>
                         </motion.h2>
                         <motion.aside
-                            className='absolute bottom-0 w-md left-30 border border-red-800 px-8 py-4 rounded-xl text-red-800 bg-white shadow-lg'
+                            className='hidden lg:block absolute bottom-0 w-md left-0 lg:left-30 border border-red-800 px-8 py-4 rounded-xl text-red-800 bg-white shadow-lg'
                             variants={{
                                 hidden: { opacity: 0, scale: 0.7 },
                                 visible: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.5, ease: 'easeOut' } }
@@ -318,9 +329,27 @@ const CardProductComputer = ({ logifleet = false }) => {
                         </motion.aside>
                     </motion.aside>
                 </motion.div>
+                <motion.aside
+                    className='block lg:hidden my-4 relative w-fit mx-4 border border-red-800 px-6 py-4 rounded-xl text-red-800 bg-white shadow-lg'
+                    variants={{
+                        hidden: { opacity: 0, scale: 0.7 },
+                        visible: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.5, ease: 'easeOut' } }
+                    }}
+                >
+                    <div className='flex justify-center absolute -top-4 left-1/2 -translate-x-1/2'>
+                        <div className=' text-white rounded-full'>
+                            <AlertCircle className='h-5 w-5 bg-red-800 rounded-full' strokeWidth={2.5} />
+                        </div>
+                    </div>
+                    <h3 className='text-base font-bold text-center'>¿Tenés problemas como estos?</h3>
+                    <ul className='mt-2 space-y-2'>
+                        <li className='flex items-start gap-2 text-xs'><AlertCircle className="h-4 w-4 mt-0.5 flex-shrink-0 text-red-700" />Gestión ineficiente de transporte, con altos costos y demoras.</li>
+                        <li className='flex items-start gap-2 text-xs'><AlertCircle className="h-4 w-4 mt-0.5 flex-shrink-0 text-red-700" />Falta de trazabilidad de incidentes</li>
+                    </ul>
+                </motion.aside>
 
                 <motion.footer 
-                    className='flex flex-col h-[700px] relative items-start gap-8 pt-10'
+                    className='flex flex-col h-[550px] mb-32 lg:mb-0 lg:h-[700px] relative items-start gap-8 pt-28 lg:pt-10'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.4 }}
@@ -329,7 +358,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <motion.img
                         src={arrow_haxtrace}
                         alt="Flecha decorativa"
-                        className='w-1/2 z-0 absolute right-0 top-0'
+                        className='w-3/4 lg:w-1/2 z-0 absolute right-0 top-0'
                         variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: 'easeOut' }}}}
                     />
                     <motion.div 
@@ -348,7 +377,7 @@ const CardProductComputer = ({ logifleet = false }) => {
 
                     <Button
                         variant='haxtrace'
-                        className='absolute -top-8 left-1/6'
+                        className='absolute -top-8 left-1/4 lg:left-1/6'
                     >
                         <a
                             href='#@'
@@ -358,10 +387,15 @@ const CardProductComputer = ({ logifleet = false }) => {
                             Ver más
                         </a>
                     </Button>
+                    <img
+                        src={haxtrace_second}
+                        alt='Computadora con el programa de Logifleet'
+                        className='absolute w-3/4 -bottom-56 block lg:hidden right-1/2 translate-x-1/2 z-20'
+                    />
                 </motion.footer>
 
                 <motion.aside
-                    className='w-full relative h-34 bg-tertiary mt-20 flex gap-6 pl-10 items-center'
+                    className='w-full relative h-34 bg-tertiary mt-20 flex gap-6 px-4 lg:pl-10 items-center'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.8 }}
@@ -373,10 +407,10 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <img
                         src={quadrant_logo}
                         alt='Logo de Quadrant'
-                        className='h-11/12'
+                        className='h-1/2 lg:h-11/12'
                     />
                     <p
-                        className='text-white w-xl'
+                        className='text-white w-xl text-xs lg:text-base'
                     >
                         Tanto  
                         <span
@@ -401,7 +435,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                     <img
                         src={haxtrace_second}
                         alt='Computadora con el programa de Logifleet'
-                        className='absolute bottom-10 right-10 z-20'
+                        className='absolute hidden lg:block bottom-10 right-10 z-20'
                     />
 
                 </motion.aside>
