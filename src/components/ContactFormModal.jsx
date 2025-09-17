@@ -18,8 +18,10 @@ const ContactFormModal = ({ isOpen, onClose }) => {
     setLoading(true);
     setError(null);
 
+    //https://formspree.io/f/movnzkpr
+
     try {
-      const response = await fetch("https://formspree.io/f/movnzkpr", { 
+      const response = await fetch("", { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
