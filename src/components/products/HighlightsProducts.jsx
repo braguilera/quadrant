@@ -25,7 +25,7 @@ const HighlightsProducts = ({ index, highlight, product = 'logifleet' }) => {
         checkIconClasses = "p-2 rounded-full w-7 lg:w-10 h-7 lg:h-10 flex-shrink-0 bg-primary text-white"; 
     }
 
-    const baseClasses = "flex items-center gap-4 text-xs lg:text-2xl font-semibold rounded-2xl px-6 py-4 shadow-lg w-70 lg:w-fit max-w-lg";
+    const baseClasses = "flex items-center gap-4 text-xs lg:text-base font-semibold rounded-2xl px-6 py-4 shadow-lg w-70 min-[450px]:w-fit lg:w-90 xl:w-fit max-w-lg";
     
     const marginClasses = [
         "ml-4 lg:ml-12",

@@ -26,7 +26,7 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
       arrow: "text-white"
     },
     'logifleet': {
-      button: "relative py-3 bg-primary font-semibold pr-10 text-white border lg:w-1/3 rounded-xl border-primary shadow-md hover:bg-white hover:text-primary text-sm lg:text-3xl",
+      button: "relative py-3 bg-primary font-semibold pr-10 text-white border lg:w-1/3 rounded-xl border-primary shadow-md hover:bg-white hover:text-primary text-sm lg:text-lg xl:text-2xl",
       circle: "absolute shadow-md -right-8 lg:-right-10 scale-140 lg:scale-180 border-3 border-secondary bg-primary",
       arrow: "text-white"
     },

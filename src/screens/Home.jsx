@@ -60,20 +60,8 @@ const Home = () => {
                   Soluciones SaaS para la gestión de almacenes (WMS) y la trazabilidad
                   logística en Argentina, diseñadas para transformar tu operación en una ventaja
                   competitiva.
-
                 </motion.p>
-                {/*
-                <motion.div
-                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                  transition={{ duration: 0.6 }}
-                >
-                    <Button variant="outline" className="text-lg px-4 py-2 text-smh padding-buttom" onClick={() => setIsFormOpen(true)}>
-                      Comenzar Ahora
-                    </Button>
-                </motion.div> 
-                */}
               </div>
-
 
               <motion.div
                 className="absolute left-0 bottom-10 lg:bottom-20 z-10 h-fit lg:h-4/5" 
