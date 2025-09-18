@@ -52,6 +52,16 @@
   }
 }
 
+@media (min-height: 320px) {
+  .arrow-width-xs {
+    @apply w-2/3; 
+  }
+
+  .bottom-xs {
+    bottom: 0; 
+  }
+}
+
 @font-face {
   font-family: 'Hackman';
   src: url('/fonts/Hackman-Bold.woff2') format('woff2'); 
@@ -90,7 +100,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem; /* O la altura exacta de tu nav, ej: 96px */
+  scroll-padding-top: 5rem;
 }
 
 @keyframes blob-move {
