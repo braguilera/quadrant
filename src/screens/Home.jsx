@@ -36,7 +36,7 @@ const Home = () => {
                 visible: { transition: { staggerChildren: 0.2 } }
               }}
             >
-              <div className="space-y-2 w-full flex flex-col relative z-20">
+              <div className="space-y-2 w-full sm:w-full md:w-3/4 md:mx-0 flex flex-col min-[500px]:w-sm min-[500px]:mx-auto  relative z-20">
                 <motion.h1
                   className="text-3xl h1-smh  lg:text-5xl w-full font-display font-bold text-secondary leading-tight flex gap-4 flex-wrap"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
@@ -64,7 +64,7 @@ const Home = () => {
               </div>
 
               <motion.div
-                className="absolute left-0 bottom-10 lg:bottom-20 z-10 h-fit lg:h-4/5" 
+                className="absolute left-0 bottom-2 lg:bottom-20 z-10 h-fit lg:h-4/5" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >

@@ -72,18 +72,18 @@ const Nav = () => {
                         />
                     </a>
 
-                    <aside className='hidden md:flex'>
+                    <aside className='hidden lg:flex'>
                         <NavLinks activeSection={activeSection} isScrolled={isScrolled} />
                     </aside>
                     
-                    <div className={`hidden md:flex items-center gap-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+                    <div className={`hidden lg:flex items-center gap-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
                         <Button variant='nav' onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
                             Agenda una reunión
                         </Button>
                     </div>
                     
                     <motion.div
-                        className='md:hidden z-50 pt-2 text-white'
+                        className='lg:hidden z-50 pt-2 text-white'
                         initial={false}
                         animate={isOpen ? "open" : "closed"}
                     >
@@ -98,7 +98,7 @@ const Nav = () => {
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="fixed inset-0 h-screen bg-primary/95 backdrop-blur-sm md:hidden"
+                            className="fixed inset-0 h-screen bg-primary/95 backdrop-blur-sm lg:hidden"
                         >
                             <motion.div
                                 className="h-full flex flex-col items-center justify-center gap-12 text-white"
