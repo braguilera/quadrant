@@ -52,12 +52,12 @@
   }
 }
 
-@media (min-height: 320px) {
+@media (min-height: 300px) {
   .arrow-width-xs {
     @apply w-2/3; 
   }
 
-  .bottom-xs {
+  .bottom-h-xs {
     bottom: 0; 
   }
 }

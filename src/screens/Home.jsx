@@ -25,7 +25,7 @@ const Home = () => {
       <Nav/>
 
       <section
-        className="relative h-full padding-y-smh py-20 pl-4 lg:pl-60 bg-black/80 flex" 
+        className="relative h-full padding-y-smh py-20 min-[768px]:pl-50 pl-4 lg:pl-60 bg-black/80 flex" 
       >
         <div className="z-10 flex flex-col h-full w-4xl padding-x-smh py-14">
             <motion.div
@@ -38,7 +38,7 @@ const Home = () => {
             >
               <div className="space-y-2 w-full sm:w-full md:w-3/4 md:mx-0 flex flex-col min-[500px]:w-sm min-[500px]:mx-auto relative z-20">
                 <motion.h1
-                  className="text-3xl h1-smh  lg:text-5xl w-full font-display font-bold text-secondary leading-tight flex gap-4 flex-wrap"
+                  className="text-3xl h1-smh min-[768px]:text-4xl lg:text-5xl w-full font-display font-bold text-secondary leading-tight flex gap-4 flex-wrap"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
@@ -46,14 +46,14 @@ const Home = () => {
 
                 </motion.h1>
                 <motion.h1
-                  className="text-3xl h1-smh lg:text-5xl font-display text-secondary leading-tight"
+                  className="text-3xl h1-smh min-[768px]:text-4xl lg:text-5xl font-display text-secondary leading-tight"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
                   Gestión de almacenes y tracking de mercadería en tiempo real
                 </motion.h1>
                 <motion.p
-                  className="lg:text-2xl text-gray-200 text-smh max-w-3xl leading-relaxed"
+                  className="lg:text-2xl min-[768px]:text-lg text-gray-200 text-smh max-w-3xl leading-relaxed"
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.6 }}
                 >
@@ -64,12 +64,12 @@ const Home = () => {
               </div>
 
               <motion.div
-                className="absolute left-0 bottom-xs bottom-10 z-10 h-fit lg:h-4/5" 
+                className="absolute left-0 bottom-10 z-10 h-fit min-[390px]:w-full min-[768px]:h-4/5 lg:h-4/5" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >
                 <motion.img
-                    className="h-full hidden lg:block pointer-events-none"
+                    className="h-full hidden min-[768px]:block pointer-events-none"
                     src={Q_arrow}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Home = () => {
                     fetchPriority="high" 
                   />
                 <motion.img
-                    className="w-full pointer-events-none arrow-width-xs  lg:hidden"
+                    className="w-full pointer-events-none arrow-width-xs min-[768px]:hidden"
                     src={Q_arrow_mobile}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

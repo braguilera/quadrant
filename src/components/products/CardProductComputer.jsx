@@ -359,7 +359,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                         src={arrow_haxtrace}
                         alt="Flecha decorativa"
                         className='w-3/4 lg:w-1/2 z-0 absolute right-0 lg:top-10 top-0'
-                        variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: 'easeOut' }}}}
+                        variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: 'easeOut' }}}}
                     />
                     <motion.div 
                         className='relative w-full h-full'
