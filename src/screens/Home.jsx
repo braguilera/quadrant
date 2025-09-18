@@ -64,7 +64,7 @@ const Home = () => {
               </div>
 
               <motion.div
-                className="absolute left-0 bottom-2 lg:bottom-20 z-10 h-fit lg:h-4/5" 
+                className="absolute left-0 bottom-2  z-10 h-fit lg:h-4/5" 
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.6 }}
               >
@@ -78,7 +78,7 @@ const Home = () => {
                     fetchPriority="high" 
                   />
                 <motion.img
-                    className="h-full pointer-events-none lg:hidden"
+                    className="w-full pointer-events-none lg:hidden"
                     src={Q_arrow_mobile}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
