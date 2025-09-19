@@ -128,7 +128,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                             ))}
                         </motion.div>
                         <motion.aside
-                            className='relative mx-4 my-4 lg:mx-0 lg:absolute lg:-bottom-24 w-auto min-[500px]:w-96 min-[500px]:mx-auto lg:ml-10 lg:right-1/4 xl:right-0 border border-red-800 px-4 lg:px-8 py-4 rounded-xl text-red-800 bg-white shadow-lg'
+                            className='relative mx-4 my-4 lg:mx-0 lg:absolute lg:-bottom-24 w-auto min-[500px]:w-96 min-[500px]:mx-auto lg:ml-10 lg:right-1/4 xl:-right-32 border border-red-800 px-4 lg:px-8 py-4 rounded-xl text-red-800 bg-white shadow-lg'
                             variants={{
                                 hidden: { opacity: 0, scale: 0.7 },
                                 visible: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.5, ease: 'easeOut' } }
@@ -294,7 +294,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                 </motion.aside>
 
                 <motion.footer 
-                    className='flex flex-col h-[550px] mb-32 lg:mb-0 lg:h-[700px] relative items-start gap-8 pt-28 min-[540px]:pt-40 min-[750px]:pt-52'
+                    className='flex flex-col h-[550px] mb-32 lg:mb-20 lg:h-[700px] relative items-start gap-8 pt-28 min-[540px]:pt-40 min-[750px]:pt-52'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.4 }}
@@ -334,7 +334,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                     </Button>
                     <img
                         src={haxtrace_second}
-                        alt='Computadora con el programa de Logifleet'
+                        alt='Computadora con el programa de Haxtrace'
                         className='absolute w-3/4 min-[620px]:w-3/5 min-[680px]:right-0 min-[680px]:translate-x-0 min-[850px]:-bottom-60 -bottom-56 block lg:hidden right-1/2 translate-x-1/2 z-20'
                     />
                 </motion.footer>
