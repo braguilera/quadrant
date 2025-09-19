@@ -32,7 +32,7 @@ const Footer = () => {
       
       <motion.footer
         id="contacto"
-        className='relative mx-auto text-white bg-[#474747] overflow-x-hidden'
+        className='relative mx-auto text-white bg-[#474747] overflow-x-clip'
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

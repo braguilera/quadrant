@@ -63,7 +63,7 @@ const CardProductComputer = ({ logifleet = false }) => {
         }
     ]
     return (
-        <section className={`flex flex-col`}>
+        <section className={`flex overflow-x-clip flex-col`}>
             {logifleet
                 ?
             <article

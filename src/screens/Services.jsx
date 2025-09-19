@@ -11,7 +11,7 @@ const Services = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <section id='servicios' className="relative h-[450px] mb-20 sm:h-auto flex bg-white flex-col"> 
+    <section id='servicios' className="relative overflow-x-clip h-[450px] mb-20 sm:h-auto flex bg-white flex-col"> 
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
       <article className=" w-full px-4 flex items-end justify-end z-30">

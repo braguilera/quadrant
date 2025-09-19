@@ -3,7 +3,7 @@ import CardProductComputer from "../components/products/CardProductComputer";
 
 export default function Products() {
   return (
-    <section id="productos" className=" bg-white relative">
+    <section id="productos" className=" bg-white overflow-x-clip relative">
 
       <article className=" w-full px-4 flex items-end justify-end z-30">
         <motion.h2
