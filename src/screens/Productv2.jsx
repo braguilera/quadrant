@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Zap, QrCode, Truck, Wifi } from "lucide-react"
 import HTmobile from "../assets/HTmobile.png"

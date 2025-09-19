@@ -1,6 +1,5 @@
 import './App.css'
 import React, { Suspense } from 'react';
-import CtaSection from './screens/CtaSection'
 import Home from './screens/Home'
 
 
@@ -16,7 +15,6 @@ function App() {
     <>
       <Home/>
       <Suspense fallback={<div>Cargando...</div>}>
-
       <Products />
       <Services />      
       <Success />

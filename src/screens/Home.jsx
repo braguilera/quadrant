@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 
-import RotatingText from "../ui/RotatingText";
 import Q_arrow from "../assets/hero/Q_arrow.svg";
 import Q_arrow_mobile from "../assets/hero/Q_2_arrow.svg";
 import hero_desktop from "../assets/hero_desktop.png";
 import Nav from "../components/Nav";
-import Button from "../ui/Button";
 import ContactFormModal from "../components/ContactFormModal";
 
 const Home = () => {
@@ -16,32 +14,27 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        {/* --- Título para la PESTAÑA DEL NAVEGADOR --- */}
         <title>Quadrant</title>
         
-        {/* --- Tags para SEO y Redes Sociales --- */}
         <meta 
           name="description" 
           content="Soluciones SaaS para la gestión de almacenes (WMS) y la trazabilidad logística en Argentina, diseñadas para transformar tu operación en una ventaja competitiva." 
         />
-        <link rel="canonical" href="https://www.tu-dominio-final.com/" />
+        <link rel="canonical" href="https://www.quadrant.com.ar/" />
 
-        {/* --- Open Graph: Mantenemos el título largo aquí para cuando se comparta el enlace --- */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Software logístico en Argentina: gestión de almacenes y tracking" />
         <meta property="og:description" content="Soluciones SaaS para la gestión de almacenes (WMS) y la trazabilidad logística en Argentina..." />
         
-        {/* --- CORRECCIÓN AQUÍ: Apuntamos a la imagen .webp en la carpeta public --- */}
-        <meta property="og:image" content="https://www.tu-dominio-final.com/og-image.webp" /> 
+        <meta property="og:image" content="https://www.quadrant.com.ar/og-image.webp" /> 
 
-        <meta property="og:url" content="https://www.tu-dominio-final.com/" />
+        <meta property="og:url" content="https://www.quadrant.com.ar/" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Software logístico en Argentina: gestión de almacenes y tracking" />
         <meta name="twitter:description" content="Soluciones SaaS para la gestión de almacenes (WMS) y la trazabilidad logística..." />
 
-        {/* --- CORRECCIÓN AQUÍ: Apuntamos a la imagen .webp en la carpeta public --- */}
-        <meta name="twitter:image" content="https://www.tu-dominio-final.com/og-image.webp" />
+        <meta name="twitter:image" content="https://www.quadrant.com.ar/og-image.webp" />
       </Helmet>
 
       <ContactFormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
@@ -101,6 +94,7 @@ const Home = () => {
                   <motion.img
                     className="h-full hidden min-[768px]:block pointer-events-none"
                     src={Q_arrow}
+                    alt="Flecha Quadrant decorativa"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -110,6 +104,7 @@ const Home = () => {
                   <motion.img
                     className="w-full pointer-events-none arrow-width-xs min-[768px]:hidden"
                     src={Q_arrow_mobile}
+                    alt="Flecha Quadrant decorativa"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

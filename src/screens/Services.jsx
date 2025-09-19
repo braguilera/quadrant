@@ -1,54 +1,14 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion";
-import CardServices from '../components/services/CardServices'; 
 import services_vector from '../assets/services/services_vector.svg';
 import services_vector_computer from '../assets/services/services_vector_computer.svg';
 import services_vector_mobile from '../assets/services/services_vector_mobile.svg';
 import Button from '../ui/Button'
-import { MessagesSquare, CodeXml, Combine, CheckCircle } from 'lucide-react';
 import ContactFormModal from '../components/ContactFormModal';
 
 
 const Services = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const ourServices=[
-    {
-      title: "Consultoría en Tecnología y Procesos",
-      description: "Te guiamos con dirección experta para optimizar tus procesos y maximizar el rendimiento de tu negocio con la tecnología adecuada.",
-      Icon: MessagesSquare
-    },
-    {
-      title: "Desarrollo de Software Personalizado",
-      description: "Transformamos tus ideas en soluciones digitales a medida, creando el software exacto que tu operación necesita para ser más innovadora y escalable.",
-      Icon: CodeXml
-    },
-    {
-      title: "Integración de Software",
-      description: "Armonizamos todos tus sistemas y aplicaciones en una fusión fluida para maximizar la eficiencia operativa y el flujo de datos sin interrupciones.",
-      Icon: Combine
-    },
-    {
-      title: "Proyectos de IoT",
-      description: "Implementamos proyectos innovadores con tecnología RFID que conectan tus dispositivos, recopilan datos valiosos y llevan tus activos al siguiente nivel.",
-      Icon: CheckCircle
-    }
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
 
   return (
     <section id='servicios' className="relative h-[450px] mb-20 sm:h-auto flex bg-white flex-col"> 

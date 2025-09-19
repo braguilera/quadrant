@@ -1,11 +1,8 @@
-"use client";
-
 import { useInView, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion"; // Se importa motion
+import { motion } from "framer-motion";
 import { cn } from "../lib/utils";
 
-// Se convierte en un componente 'motion'
 export const NumberTicker = ({
   value,
   startValue = 0,
@@ -13,7 +10,7 @@ export const NumberTicker = ({
   delay = 0,
   className,
   decimalPlaces = 0,
-  ...props // Se aceptan todas las demás props (incluida 'animate')
+  ...props 
 }) => {
   const ref = useRef(null);
   const motionValue = useMotionValue(direction === "down" ? value : startValue);
@@ -46,7 +43,6 @@ export const NumberTicker = ({
   );
 
   return (
-    // El 'span' ahora es un 'motion.span' y recibe las props de animación
     <motion.span
       ref={ref}
       className={cn("inline-block tabular-nums", className)}

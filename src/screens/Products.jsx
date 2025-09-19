@@ -1,12 +1,4 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import InteractiveHotspot from "../components/InteractiveHotspot";
-import { ArrowRight, X } from "lucide-react";
-import HTmobile from "../assets/HTmobile.png";
-import LFmobile from "../assets/LFmobile.png";
-import arrow_first_product from "../assets/products/arrow_first_product.svg";
-import arrow_second_product from "../assets/products/arrow_second_product.svg";
-import CardProduct from "../components/products/CardProduct";
+import { motion } from "framer-motion";
 import CardProductComputer from "../components/products/CardProductComputer";
 
 export default function Products() {
@@ -25,11 +17,6 @@ export default function Products() {
         </motion.h2>
         
       </article>
-
-      {/* <article className="relative z-30 xl:hidden">
-        <CardProduct logifleet={true}/>
-        <CardProduct/>
-      </article> */}
 
       <article className="flex flex-col gap-20 mt-20 relative z-30">
         <CardProductComputer logifleet={true}/>

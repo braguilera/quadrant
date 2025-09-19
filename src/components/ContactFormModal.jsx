@@ -21,11 +21,9 @@ const ContactFormModal = ({ isOpen, onClose }) => {
     //https://formspree.io/f/movnzkpr
 
     try {
-      const response = await fetch("", { 
+      const response = await fetch("https://formspree.io/f/movnzkpr", { 
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: fullName, email, company, message: query })
       });
 
@@ -60,23 +58,20 @@ const ContactFormModal = ({ isOpen, onClose }) => {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-white rounded-2xl p-6 pb-16 max-w-lg w-full relative overflow-hidden"
+            className="bg-white rounded-2xl p-6 pb-16 max-w-lg w-full relative overflow-y-auto max-h-[90vh]"
             initial={{ y: 50, scale: 0.9 }}
             animate={{ y: 0, scale: 1 }}
             exit={{ y: 50, scale: 0.9 }}
             key={showSuccessPopup ? 'success' : 'form'}
           >
             <div className="absolute inset-0 z-0 pointer-events-none">
-              <img
-                src={form_arrow}
-                alt="Vector decorativo"
-                className="absolute -bottom-1/6 -left-1/4 w-full h-auto"
-              />
+              <img src={form_arrow} alt="" className="absolute -bottom-1/6 -left-1/4 w-full h-auto" />
             </div>
 
             <div className="relative z-10">
               <button 
                 onClick={onClose} 
+                aria-label="Cerrar formulario de contacto"
                 className="absolute top-[-16px] right-[-16px] p-2 rounded-full hover:bg-gray-200"
               >
                 <X className="w-6 h-6 text-gray-500" />
@@ -108,14 +103,31 @@ const ContactFormModal = ({ isOpen, onClose }) => {
                     <p className="text-gray-600 mb-6 text-center text-sm">Cuéntanos un poco sobre tus necesidades y nuestro equipo explorará contigo la mejor solución para tu empresa.</p>
                     
                     <form onSubmit={handleSubmit} className="space-y-4">
-                      <input type="text" placeholder="Nombre y Apellido" name="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
-                      <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
-                      <input type="text" placeholder="Empresa" name="company" value={company} onChange={(e) => setCompany(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
-                      <textarea placeholder="Tu consulta..." name="query" value={query} onChange={(e) => setQuery(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                      <div>
+                        <label htmlFor="fullName" className="sr-only">Nombre y Apellido</label>
+                        <input id="fullName" type="text" placeholder="Nombre y Apellido" name="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+                      </div>
+
+                      <div>
+                        <label htmlFor="email" className="sr-only">Email</label>
+                        <input id="email" type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+                      </div>
+
+                      <div>
+                        <label htmlFor="company" className="sr-only">Empresa</label>
+                        <input id="company" type="text" placeholder="Empresa" name="company" value={company} onChange={(e) => setCompany(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" />
+                      </div>
+
+                      <div>
+                        <label htmlFor="query" className="sr-only">Tu consulta</label>
+                        <textarea id="query" placeholder="Tu consulta..." name="query" value={query} onChange={(e) => setQuery(e.target.value)} required className="w-full p-3 border border-gray-300 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                      </div>
+                      
                       <button type="submit" disabled={loading} className="w-full bg-primary border border-primary text-white py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition duration-300 ease-in-out cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
                         {loading ? 'Enviando...' : 'Enviar Consulta'}
                       </button>
-                      {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+                      
+                      {error && <p className="text-red-500 text-center mt-2" role="alert">{error}</p>}
                     </form>
                   </motion.div>
                 )}

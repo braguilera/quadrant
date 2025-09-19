@@ -12,52 +12,7 @@ import arrow_haxtrace from '../../assets/products/arrow_haxtrace.webp';
 import HighlightsProducts from './HighlightsProducts';
 import quadrant_logo from '../../assets/products/quadrant_logo.svg'
 import Button from '../../ui/Button'
-import ContactFormModal from '../ContactFormModal';
 
-
-const hoverCardVariants = {
-    rest: {
-        height: '28rem',
-        y: 0,
-    },
-    hover: {
-        height: '38rem',
-        y: '-10rem',
-    }
-};
-
-const cardEntryVariants = (isLogifleet) => ({
-    hidden: {
-        opacity: 0,
-        x: isLogifleet ? -100 : 100
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            type: 'spring',
-            stiffness: 60,
-            damping: 15,
-            when: 'beforeChildren',
-        }
-    }
-});
-
-const imageEntryVariants = {
-    hidden: { opacity: 0, y: 300 },
-    visible: { opacity: 1, y: 250, transition: { type: 'spring', bounce: 0.4, duration: .8} }
-};
-
-const textContentVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.1
-        }
-    }
-};
 
 const textItemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -65,16 +20,6 @@ const textItemVariants = {
 };
 
 const CardProductComputer = ({ logifleet = false }) => {
-    const [isFormOpen, setIsFormOpen] = useState(false);
-
-
-    const finalImageVariants = {
-        ...(logifleet ? imageEntryVariants : { ...imageEntryVariants, hidden: { opacity: 0, y: 300 } }),
-        
-    };
-    
-    const haxtraceImageHoverVariants = { ...finalImageVariants, rest: { y: 250 } };
-
 
     const highlightsHaxtrace = [{
             text: 'Información centralizada para decisiones rápidas.',

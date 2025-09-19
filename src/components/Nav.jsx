@@ -19,9 +19,7 @@ const Nav = () => {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
-
-            let newActiveSection = activeSection; 
-
+            let newActiveSection = activeSection;
             navItems.forEach(item => {
                 const section = document.getElementById(item.id);
                 if (section) {
@@ -31,12 +29,10 @@ const Nav = () => {
                     }
                 }
             });
-
             if (activeSection !== newActiveSection) {
                 setActiveSection(newActiveSection);
             }
         };
-
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [activeSection]);
@@ -64,7 +60,7 @@ const Nav = () => {
                 className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${isScrolled ? 'bg-black/60 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}
             >
                 <div className='max-w-7xl mx-auto p-4 flex items-center justify-between'>
-                    <a href="#inicio">
+                    <a href="#inicio" aria-label="Ir a la página de inicio de Quadrant">
                         <img
                             src={quadrantLogo}
                             alt="Logo de Quadrant, ir al inicio"
@@ -87,13 +83,19 @@ const Nav = () => {
                         initial={false}
                         animate={isOpen ? "open" : "closed"}
                     >
-                        <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+                        <MenuToggle 
+                            toggle={() => setIsOpen(!isOpen)} 
+                            aria-label={isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+                            aria-expanded={isOpen}
+                            aria-controls="mobile-menu"
+                        />
                     </motion.div>
                 </div>
 
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
+                            id="mobile-menu"
                             variants={mobileMenuVariants}
                             initial="closed"
                             animate="open"
@@ -115,8 +117,7 @@ const Nav = () => {
                                     <NavLinks activeSection={activeSection} isScrolled={isScrolled} />
                                 </motion.div>
                                 <motion.div variants={itemVariants}>
-                                    <Button onClick={() => (setIsOpen(false), setIsFormOpen(true))}
-                                    >
+                                    <Button onClick={() => (setIsOpen(false), setIsFormOpen(true))}>
                                         Agenda una reunión
                                     </Button>
                                 </motion.div>

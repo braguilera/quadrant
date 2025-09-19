@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-// Ya no necesitamos 'useEmblaCarousel' ni 'Autoplay'
 
 import sucess_video from '../assets/success/success_video.mp4';
 import video_portrait from '../assets/success/video_portrait.webp';
 import Succes_img1 from '../assets/success/succes_img1.webp';
-import Succes_img2 from '../assets/success/succes_img2.webp';
 import Succes_img3 from '../assets/success/succes_img3.webp';
-import Succes_img4 from '../assets/success/succes_img4.webp';
 import Succes_img5 from '../assets/success/succes_img5.webp';
-import Succes_img6 from '../assets/success/succes_img6.webp';
-import Succes_img7 from '../assets/success/succes_img7.webp';
 import Succes_img8 from '../assets/success/succes_img8.webp';
 import Button from '../ui/Button';
 import { Check } from 'lucide-react';
