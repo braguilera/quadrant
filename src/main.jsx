@@ -1,13 +1,15 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { HelmetProvider } from 'react-helmet-async'; 
-import './index.css';
+import React, { Suspense } from 'react';
+import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App.jsx';
+import './index.css';
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <Suspense fallback={<div>Cargando...</div>}>
+        <App />
+      </Suspense>
     </HelmetProvider>
   </React.StrictMode>
 );
