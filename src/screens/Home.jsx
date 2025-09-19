@@ -62,21 +62,21 @@ const Home = () => {
               >
                 <div className="space-y-2 w-full sm:w-full md:w-3/4 md:mx-0 flex flex-col min-[500px]:w-sm min-[500px]:mx-auto relative z-20">
                   <motion.h1
-                    className="text-3xl h1-smh min-[768px]:text-4xl lg:text-5xl w-full font-display font-bold text-secondary leading-tight flex gap-4 flex-wrap"
+                    className="text-3xl  h1-smh min-[768px]:text-4xl lg:text-5xl w-full font-Hackman font-bold text-secondary leading-tight flex gap-4 flex-wrap"
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                     transition={{ duration: 0.6 }}
                   >
                     Software logístico en Argentina: 
                   </motion.h1>
                   <motion.h1
-                    className="text-3xl h1-smh min-[768px]:text-4xl lg:text-5xl font-display text-secondary leading-tight"
+                    className="text-3xl h1-smh min-[768px]:text-4xl lg:text-5xl font-Hackman text-secondary leading-tight"
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                     transition={{ duration: 0.6 }}
                   >
                     Gestión de almacenes y tracking de mercadería en tiempo real
                   </motion.h1>
                   <motion.p
-                    className="lg:text-2xl min-[768px]:text-lg text-gray-200 text-smh max-w-3xl leading-relaxed"
+                    className="lg:text-2xl min-[768px]:text-lg text-gray-200 text-smh max-w-3xl  leading-relaxed"
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                     transition={{ duration: 0.6 }}
                   >

@@ -21,7 +21,7 @@ const NavLinks = ({ activeSection, isScrolled }) => {
                     <a
                         key={item.name}
                         href={item.href}
-                        className={`relative font-semibold transition-colors duration-300 ${textColorClass}`}
+                        className={`relative font-Hackman transition-colors duration-300 ${textColorClass}`}
                     >
                         {item.name}
                         {isActive && (

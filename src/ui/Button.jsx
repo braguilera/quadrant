@@ -9,7 +9,7 @@ const Button = ({ onClick, children, variant = 'primary', className = '' }) => {
     hover: { rotate: 45, transition: { duration: 0.3, ease: "easeOut" } }
   };
 
-  const baseStyles = "inline-flex items-center justify-center gap-4 px-4 lg:px-8 py-2 font-bold transition-colors duration-300 cursor-pointer";
+  const baseStyles = "font-Hackman inline-flex items-center justify-center gap-4 px-4 lg:px-8 py-2 font-bold transition-colors duration-300 cursor-pointer";
 
   const variantStyles = {
     'case-study': {

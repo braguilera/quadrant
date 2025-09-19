@@ -113,7 +113,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                                     visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } }
                                 }}
                             />
-                            <motion.h2 className='text-3xl min-[500px]:text-4xl min-[800px]:text-5xl min-[500px]:w-80 w-52 lg:text-6xl lg:w-2xl font-bold ml-8' variants={textItemVariants}>
+                            <motion.h2 className='text-3xl font-Hackman min-[500px]:text-4xl min-[800px]:text-5xl min-[500px]:w-80 w-52 lg:text-6xl lg:w-2xl font-bold ml-8' variants={textItemVariants}>
                                 Gestión integral de almacenes (WMS)
                             </motion.h2>
                         </aside>
@@ -122,7 +122,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
                         >
                             {tags.map((tag, index) => (
-                                <motion.p key={index} className='bg-secondary px-3 rounded-lg border border-gray-400 w-fit' variants={textItemVariants}>
+                                <motion.p key={index} className='bg-secondary font-Gotham px-3 rounded-lg border border-gray-400 w-fit' variants={textItemVariants}>
                                     {tag.text}
                                 </motion.p>
                             ))}
@@ -139,7 +139,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                                     <AlertCircle className='h-7 w-7 bg-red-800 rounded-full' strokeWidth={2.5} />
                                 </div>
                             </div>
-                            <h3 className='lg:text-xl font-bold text-center'>¿Tenés problemas como estos?</h3>
+                            <h3 className='lg:text-xl font-Hackman font-bold text-center'>¿Tenés problemas como estos?</h3>
                             <ul className='mt-2 space-y-2'>
                                 <li className='flex items-start gap-2 text-xs lg:text-base'><AlertCircle className="h-4 w-4 lg:h-5 lg:w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Dificultad en el seguimiento de productos por lote.</span></li>
                                 <li className='flex items-start gap-2 text-xs lg:text-base'><AlertCircle className="h-4 w-4 lg:h-5 lg:w-5 mt-0.5 flex-shrink-0 text-red-700" /><span>Errores en picking y despachos.</span></li>
@@ -246,7 +246,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                             visible: { transition: { staggerChildren: 0.15 } }
                         }}
                     >
-                        <motion.h2 className='text-2xl xl:text-7xl min-[500px]:text-3xl min-[650px]:text-4xl md:text-5xl min-[650px]:w-80 md:w-full  lg:text-6xl w-44 lg:w-xl font-bold ' variants={textItemVariants}>
+                        <motion.h2 className='font-Hackman text-2xl xl:text-7xl min-[500px]:text-3xl min-[650px]:text-4xl md:text-5xl min-[650px]:w-80 md:w-full  lg:text-6xl w-44 lg:w-xl font-bold ' variants={textItemVariants}>
                             Trazabilidad 
                             <span
                                 className='text-tertiary pl-1 lg:pl-3'
@@ -266,7 +266,7 @@ const CardProductComputer = ({ logifleet = false }) => {
                                     <AlertCircle className='h-7 w-7 bg-red-800 rounded-full' strokeWidth={2.5} />
                                 </div>
                             </div>
-                            <h3 className='text-xl xl:text-2xl font-bold text-center'>¿Tenés problemas como estos?</h3>
+                            <h3 className='font-Hackman text-xl xl:text-2xl font-bold text-center'>¿Tenés problemas como estos?</h3>
                             <ul className='mt-2 space-y-2'>
                                 <li className='flex items-start text-sm xl:text-base gap-2'><AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-red-700" />Gestión ineficiente de transporte, con altos costos y demoras.</li>
                                 <li className='flex items-start text-sm xl:text-base gap-2'><AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0 text-red-700" />Falta de trazabilidad de incidentes</li>

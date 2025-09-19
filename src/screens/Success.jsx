@@ -57,10 +57,10 @@ const Success = () => {
           variants={leftPanelVariants}
         >
           <aside className='bg-secondary absolute -left-8 lg:-left-10 top-4 lg:top-10 text-primary px-10 lg:px-20 py-1 rounded-r-full shadow-md'>
-            <p className='text-xl lg:text-2xl xl:text-4xl font-bold'>Casos de éxito</p>
+            <p className='font-Hackman text-xl lg:text-2xl xl:text-4xl font-bold'>Casos de éxito</p>
             <Check className='text-secondary bg-primary p-1 lg:p-2 rounded-full absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 xl:h-10 xl:w-10' />
           </aside>
-          <h2 className='text-3xl lg:text-4xl font-bold text-white pt-16 lg:pt-10'>
+          <h2 className='font-Hackman text-3xl lg:text-4xl font-bold text-white pt-16 lg:pt-10'>
             EMSA Logística.
           </h2>
           <p className='text-white text-start text-sm lg:text-base'>

@@ -16,7 +16,7 @@ const Services = () => {
 
       <article className=" w-full px-4 flex items-end justify-end z-30">
         <motion.h2
-          className="py-3 px-10 lg:px-20 text-2xl lg:text-5xl font-bold text-white bg-primary w-fit rounded-br-3xl rounded-bl-3xl"
+          className="py-3 font-Hackman px-10 lg:px-20 text-2xl lg:text-5xl font-bold text-white bg-primary w-fit rounded-br-3xl rounded-bl-3xl"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -34,14 +34,14 @@ const Services = () => {
         />
         <div className='flex flex-col gap-4'>
           <motion.h2
-              className="text-xl lg:text-7xl w-60 lg:w-full pt-10 lg:pt-32 font-display font-bold text-gray-600/90 "
+              className="font-Hackman text-xl lg:text-7xl w-60 lg:w-full pt-10 lg:pt-32 font-display font-bold text-gray-600/90 "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
           >
               <span
-                  className='text-primary bg-secondary px-2 mr-1 lg:mr-3 rounded-md lg:rounded-xl'
+                  className='text-primary bg-secondary py-1 px-2 mr-1 lg:mr-3 rounded-md lg:rounded-xl'
               >
                 Consultoría
               </span>

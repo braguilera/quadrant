@@ -52,7 +52,7 @@ const Footer = () => {
           <div className='flex flex-col lg:flex-row items-center justify-start gap-12'>
             
             <motion.div className='w-full lg:w-1/2 text-center lg:text-left' variants={itemVariants}>
-              <h2 className='text-5xl lg:text-6xl font-bold mb-4'>
+              <h2 className='text-5xl font-Hackman lg:text-6xl font-bold mb-4'>
                 Contactate con nuestro equipo
               </h2>
               <p className='text-xl text-gray-300'>
